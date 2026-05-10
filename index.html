@@ -119,10 +119,11 @@
 <div id="stage-bar" class="sticky top-0 z-30 border-b hairline" style="background: rgba(10,10,11,0.85); backdrop-filter: blur(10px);">
   <div class="max-w-[1240px] mx-auto px-8 py-3 flex items-center gap-3 overflow-x-auto">
     <span class="text-[11px] muted uppercase tracking-wider shrink-0">I'm…</span>
-    <button data-stage="curious"   class="stage-pill chip chip-neutral whitespace-nowrap">Just curious</button>
-    <button data-stage="watching"  class="stage-pill chip chip-neutral whitespace-nowrap">Watching the market</button>
-    <button data-stage="selling90" class="stage-pill chip chip-neutral whitespace-nowrap" data-active="true">Selling in the next 90 days</button>
-    <button data-stage="shopping"  class="stage-pill chip chip-neutral whitespace-nowrap">Comparing agents</button>
+    <button data-stage="curious"    class="stage-pill chip chip-neutral whitespace-nowrap">Just curious</button>
+    <button data-stage="watching"   class="stage-pill chip chip-neutral whitespace-nowrap">Watching the market</button>
+    <button data-stage="considering" class="stage-pill chip chip-neutral whitespace-nowrap">Selling in 6–12 months</button>
+    <button data-stage="selling90"  class="stage-pill chip chip-neutral whitespace-nowrap" data-active="true">Selling in 90 days</button>
+    <button data-stage="shopping"   class="stage-pill chip chip-neutral whitespace-nowrap">Comparing agents</button>
     <span class="ml-auto text-[11px] muted-2 shrink-0 hidden md:inline">We'll tune this report for you</span>
   </div>
 </div>
@@ -146,10 +147,10 @@
   <div class="max-w-[1240px] mx-auto px-8 py-3 flex items-center justify-between gap-6 text-[12px]">
     <div class="flex items-center gap-2">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="color: var(--emerald);"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span class="text-white">This report is free.</span>
-      <span class="muted">No agent will call you. We don't sell your info. We earn money only if you choose us to list — and only on results.</span>
+      <span class="text-white">We're the agent that doesn't push you to sell.</span>
+      <span class="muted">Free report. No call. We don't sell your info. We make money only if you choose us — and only when you actually sell.</span>
     </div>
-    <a href="#how-it-works" class="muted-2 hover:text-white text-[11px] underline decoration-dotted shrink-0">How we make money</a>
+    <span class="muted-2 hover:text-white text-[11px] underline decoration-dotted shrink-0 has-methodology" tabindex="0" style="cursor:help;">How we make money<span class="methodology-pop" style="left:auto; right:0; min-width: 320px;"><span class="text-white block mb-1.5 text-[12px] font-semibold">Where Reed's revenue comes from</span>This report is free and always will be. We earn one thing only: a flat listing fee — about 1% of sale price — and only if you choose us to sell your home. We don't take referral fees from other agents. We don't sell your contact info. We don't run ads to you. If you never list with us, we never make a dollar from you.</span></span>
   </div>
 </div>
 
@@ -168,7 +169,7 @@
           <div class="chip chip-neutral">1247 Highland View Dr · Atlanta, GA 30307</div>
         </div>
 
-        <div class="text-[13px] muted mb-3">Hi Jordan — here's what your house has been doing for you.</div>
+        <div class="text-[13px] muted mb-3">Hi Jordan — most people learn what their house is worth on the day they sell it. You're going to learn it every Monday.</div>
         <h1 class="serif text-[68px] leading-[1.02] font-semibold tracking-tight mb-5">
           You got <span class="gradient-emerald">$47,200</span> richer last year. Without lifting a finger.
         </h1>
@@ -243,9 +244,9 @@
 
     <div class="col-span-12 panel p-0 ring-soft overflow-hidden">
       <div class="grid grid-cols-12 text-[12px] muted uppercase tracking-wider px-6 py-4 border-b hairline" style="background: #0e0e12;">
-        <div class="col-span-4">The question you're asking</div>
-        <div class="col-span-4">Zillow / Redfin gives you</div>
-        <div class="col-span-4 text-white">What Reed gives you</div>
+        <div class="col-span-4">The question you actually have</div>
+        <div class="col-span-4">What a search engine can answer</div>
+        <div class="col-span-4 text-white">What an agent can answer</div>
       </div>
 
       <div class="grid grid-cols-12 px-6 py-5 border-b hairline items-start">
@@ -256,7 +257,7 @@
 
       <div class="grid grid-cols-12 px-6 py-5 border-b hairline items-start">
         <div class="col-span-4 text-[14px] font-medium pr-4">"Should I sell now or wait?"</div>
-        <div class="col-span-4 text-[13px] muted pr-4">Doesn't say. Shows you a generic "market trends" chart and lets you guess.</div>
+        <div class="col-span-4 text-[13px] muted pr-4">Can't say. Zillow makes the same money whether you sell today or in 2030. They have no reason to know.</div>
         <div class="col-span-4 text-[13px] pr-4">Sell by <span class="text-white font-medium">May 31</span>. Waiting until July costs you <span class="num-tabular font-semibold" style="color: var(--rose);">$17,000</span>. Three reasons, named.</div>
       </div>
 
@@ -286,7 +287,7 @@
     </div>
 
     <div class="col-span-12 text-center mt-4">
-      <div class="serif text-[22px] text-white leading-snug max-w-[820px] mx-auto">Zillow is a search engine. Reed is the listing agent you wish you had — without the 6% commission, without the agenda.</div>
+      <div class="serif text-[22px] text-white leading-snug max-w-[820px] mx-auto">Zillow has no agenda because it has no answer. Most agents have an answer because they have an agenda. Reed has an answer — and no reason to push you to sell now.</div>
     </div>
   </section>
 
@@ -559,12 +560,12 @@
 
     <div class="col-span-4 panel p-6 ring-soft">
       <div class="text-[12px] muted uppercase tracking-wider mb-2">What this means for you</div>
-      <div class="text-[15px] font-semibold leading-snug mb-3">Buyers are real. Price honestly and they show up.</div>
+      <div class="text-[15px] font-semibold leading-snug mb-3">Price it $865k–$885k. 8 in 10 homes here got an offer in week one.</div>
       <div class="text-[13px] muted leading-relaxed">
-        These are real buyers. More of them are pre-approved. More of them are moving from out of state. Twice as many of them have alerts set on homes like yours.
+        47 buyers. 31 already pre-approved past your number. 18 toured a home on your street. They're not browsing — they're hunting.
       </div>
       <div class="text-[13px] muted leading-relaxed mt-3">
-        But: <span class="text-white">don't push your price above $900k.</span> Almost 4 in 10 homes that did had to cut their price. The houses that priced honestly sold fast. The greedy ones sat.
+        Push above $900k and you join the 38% who had to cut. Honest pricing wins this market. Greedy pricing sits.
       </div>
       <div class="mt-5 pt-4 border-t hairline">
         <div class="text-[11px] muted uppercase tracking-wider mb-2">List your home at</div>
@@ -582,8 +583,8 @@
   <section id="sell-window" class="grid grid-cols-12 gap-6">
     <div class="col-span-12 flex items-end justify-between">
       <div>
-        <div class="text-[12px] muted uppercase tracking-wider mb-2">Should you sell now?</div>
-        <h2 class="serif text-[36px] font-semibold tracking-tight">List in the next 3 weeks. Wait, and you lose $17,000.</h2>
+        <div id="sell-window-eyebrow" class="text-[12px] muted uppercase tracking-wider mb-2">Should you sell now?</div>
+        <h2 id="sell-window-title" class="serif text-[36px] font-semibold tracking-tight">List in the next 3 weeks. Wait, and you lose $17,000.</h2>
       </div>
       <div class="chip chip-neutral">Next 5 months · refreshed daily</div>
     </div>
@@ -602,7 +603,7 @@
         <div class="panel-2 p-4">
           <div class="chip chip-emerald mb-2">Recommended</div>
           <div class="text-[12px] muted">List by <span class="text-white">May 31</span></div>
-          <div class="text-[22px] font-semibold num-tabular mt-1 has-methodology" tabindex="0">$818k<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">From $875k list to $818k in your pocket</span>Likely sale price $875k · agent fee −$26.3k · closing costs −$8.7k · mortgage payoff −$22.0k · net to you <span class="text-white">$818k</span>. Edit any number to re-run.</span></div>
+          <div class="text-[22px] font-semibold num-tabular mt-1 has-methodology" tabindex="0">$818k<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">From $875k list to $818k in your pocket</span>Likely sale price $875k · agent fee −$26.3k · closing costs −$8.7k · mortgage payoff −$22.0k · net to you <span class="text-white">$818k</span>.<br><br><a href="#counter-offer" style="color: var(--emerald);">Run with your numbers →</a></span></div>
           <div class="text-[11px] muted-2">in your pocket · sells in ~14 days</div>
         </div>
         <div class="panel-2 p-4">
@@ -654,6 +655,59 @@
         <button onclick="document.getElementById('save-report-nav').click()" class="w-full py-2 rounded-lg text-[12px] font-medium border hairline-2 hover:bg-[#1a1a20] transition muted">
           Not selling yet — just email me when this changes
         </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────── SECTION: EQUITY-USE BRANCHING ───────────────────────────── -->
+  <section class="grid grid-cols-12 gap-6">
+    <div class="col-span-12 flex items-end justify-between">
+      <div>
+        <div class="text-[12px] muted uppercase tracking-wider mb-2">Your $818k, made real</div>
+        <h2 class="serif text-[36px] font-semibold tracking-tight">What you'd actually do with the money.</h2>
+      </div>
+      <div class="chip chip-neutral">Most owners haven't thought about this yet</div>
+    </div>
+
+    <div class="col-span-4 panel p-6 ring-soft hover:border-[var(--emerald)] transition cursor-pointer">
+      <div class="chip chip-emerald mb-3">Buy bigger</div>
+      <div class="text-[16px] font-semibold mb-2">Trade up to a $1.2M home</div>
+      <div class="text-[13px] muted mb-4 leading-relaxed">Put $818k down on a home with an assumable 4.1% mortgage. Your payment: <span class="text-white">$2,940/mo</span>. We have <span class="num-tabular text-white">14 homes</span> in your school zone matching this right now.</div>
+      <button class="chip chip-neutral hover:bg-[#22222a]">See the 14 homes →</button>
+    </div>
+
+    <div class="col-span-4 panel p-6 ring-soft hover:border-[var(--emerald)] transition cursor-pointer">
+      <div class="chip chip-indigo mb-3">Stay, cash out</div>
+      <div class="text-[16px] font-semibold mb-2">Pull $235k out without selling</div>
+      <div class="text-[13px] muted mb-4 leading-relaxed">A home equity line up to <span class="text-white">$235k at 7.4%</span>. Three lenders pre-vetted for Inman Park. Closes in ~21 days. Keep your house, keep your equity working.</div>
+      <button class="chip chip-neutral hover:bg-[#22222a]">Compare 3 offers →</button>
+    </div>
+
+    <div class="col-span-4 panel p-6 ring-soft hover:border-[var(--emerald)] transition cursor-pointer">
+      <div class="chip chip-amber mb-3">Bank it</div>
+      <div class="text-[16px] font-semibold mb-2">$818k → $1.04M in 5 years</div>
+      <div class="text-[13px] muted mb-4 leading-relaxed">Sell, invest in an index fund at 5%, get to <span class="text-white">$1.04M by 2031</span>. Or buy a $400k second home in cash and bank $418k. Either way, your equity stops sitting still.</div>
+      <button class="chip chip-neutral hover:bg-[#22222a]">Run my plan →</button>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────── SECTION: COUNTER-OFFER RECONCILER ───────────────────────────── -->
+  <section id="counter-offer" class="panel p-8 ring-soft">
+    <div class="grid grid-cols-12 gap-8 items-center">
+      <div class="col-span-7">
+        <div class="text-[12px] muted uppercase tracking-wider mb-2">Already talked to an agent?</div>
+        <h3 class="serif text-[30px] font-semibold tracking-tight mb-3">Two agents gave you two different numbers? Run them past Reed.</h3>
+        <p class="text-[13px] muted mb-5 leading-relaxed">Listing agents quote high to win the listing. Reed will tell you exactly what would have to be true for their number to hold — and what's likely to break it. No bias, no listing pitch.</p>
+        <div class="panel-2 p-2 flex items-center gap-2 max-w-[460px]">
+          <span class="text-[13px] muted px-2">Their number:</span>
+          <input id="agent-num" type="text" placeholder="$920,000" class="flex-1 bg-transparent outline-none text-[14px] py-2.5 num-tabular" />
+          <button id="agent-submit" class="px-3 py-1.5 rounded-lg text-[13px] font-medium" style="background: var(--emerald); color:#0a0a0b;">Check it</button>
+        </div>
+      </div>
+      <div class="col-span-5 panel-2 p-5 ring-soft" id="agent-answer">
+        <div class="text-[11px] muted uppercase tracking-wider mb-2">Reed will say</div>
+        <div class="text-[13px] leading-relaxed muted">Type the number an agent quoted you above. Reed will reconcile it against your $847k estimate, the four real comps, and current demand — in 5 seconds, with the math.</div>
+        <div class="text-[11px] muted-2 mt-4">Most second opinions cost $400 and three days. This one's free.</div>
       </div>
     </div>
   </section>
@@ -761,6 +815,41 @@
     </div>
   </section>
 
+  <!-- ───────────────────────────── SECTION: WHAT WE MIGHT BE WRONG ABOUT (self-skepticism) ───────────────────────────── -->
+  <section class="grid grid-cols-12 gap-6">
+    <div class="col-span-12 flex items-end justify-between">
+      <div>
+        <div class="text-[12px] uppercase tracking-wider mb-2" style="color: var(--amber);">What we might be wrong about</div>
+        <h2 class="serif text-[36px] font-semibold tracking-tight">Three places our $847k could be off.</h2>
+      </div>
+      <div class="chip chip-amber">No agent will ever tell you this</div>
+    </div>
+
+    <div class="col-span-12 panel p-6 ring-soft" style="border-color: rgba(251,191,36,0.20);">
+      <div class="text-[13px] muted mb-5 max-w-[720px] leading-relaxed">
+        Most reports give you a single confident number. Reed gives you the number plus the three places it could be wrong. Because if you're going to bet $850,000 on a price, you should know exactly where the model is squinting.
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="panel-2 p-5">
+          <div class="text-[12px] uppercase tracking-wider mb-2" style="color: var(--amber);">Comp B's small yard</div>
+          <div class="text-[13px] leading-relaxed muted">998 Euclid had a 0.19 acre lot vs your 0.31. We adjusted up by $22k. If Atlanta's real yard premium is closer to $40k per 0.1 acre, your home is worth <span class="text-white num-tabular">~$8,000 more</span> than we said.</div>
+        </div>
+        <div class="panel-2 p-5">
+          <div class="text-[12px] uppercase tracking-wider mb-2" style="color: var(--amber);">Your finished basement</div>
+          <div class="text-[13px] leading-relaxed muted">None of the four comps have one. We credited +$14k based on zip-wide averages. Could be worth <span class="text-white num-tabular">$12k more</span> if a comparable home with a basement closes near you in the next month.</div>
+        </div>
+        <div class="panel-2 p-5">
+          <div class="text-[12px] uppercase tracking-wider mb-2" style="color: var(--amber);">The BeltLine bump hasn't shown up yet</div>
+          <div class="text-[13px] leading-relaxed muted">Approval was April 30. The recent sales we used closed before that. The next 60 days of comps may push your number up <span class="text-white num-tabular">$5k–$10k</span> as the BeltLine premium prices in.</div>
+        </div>
+      </div>
+      <div class="mt-5 pt-5 border-t hairline flex items-center justify-between text-[12px]">
+        <span class="muted">Net: your honest range stays $836k–$858k. But the asymmetry leans up.</span>
+        <a href="#ask" class="chip chip-neutral hover:bg-[#22222a]">Ask Reed how to test these →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ───────────────────────────── SECTION: COUNTERINTUITIVE INSIGHTS ───────────────────────────── -->
   <section class="grid grid-cols-12 gap-6">
     <div class="col-span-12 flex items-end justify-between">
@@ -771,7 +860,21 @@
       <div class="chip chip-neutral">Based on 4,200 home sales near you</div>
     </div>
 
-    <!-- Card 1 -->
+    <!-- Card 1 (was Card 6) — Linda's screenshot moment, lead with it -->
+    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
+      <div class="relative">
+        <div class="chip chip-emerald mb-4">Where your wealth came from</div>
+        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Owning this house made you 4× more money than paying it off did.</div>
+        <p class="text-[13px] muted leading-relaxed mb-5">Since you bought in 2019, you paid down <span class="text-white">$57,400</span> in principal. The market added <span class="text-white">$235,200</span> on top. Your house did 80% of the work. You did 20%.</p>
+        <div class="panel-2 p-3 flex items-center justify-between">
+          <div class="text-[11px] muted">Total wealth this house has built</div>
+          <div class="text-[15px] font-semibold num-tabular">$292,600</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 (was Card 1) -->
     <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
       <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
       <div class="relative">
@@ -835,8 +938,8 @@
       <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(251,113,133,0.12), transparent); transform: translate(40%, -40%);"></div>
       <div class="relative">
         <div class="chip chip-rose mb-4">The 21-day cliff</div>
-        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">If your home doesn't sell in 21 days, you lose 73% of your buyers.</div>
-        <p class="text-[13px] muted leading-relaxed mb-5">Looking at 4,200 home sales near you: if a home didn't go under contract within 3 weeks, the showings <span class="text-white">collapsed by 73%</span> after that. Buyers treat stale listings like spoiled milk. Pricing right matters more than pricing high.</p>
+        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Day 22 is when buyers start asking what's wrong with your house.</div>
+        <p class="text-[13px] muted leading-relaxed mb-5">Across 4,200 nearby sales, showings collapse <span class="text-white">73%</span> after week three. Not because the house changed — because the listing aged. Buyers treat day-22 homes the way you treat the milk you forgot about. Pricing right beats pricing high. Every time.</p>
         <div class="panel-2 p-3 flex items-center justify-between">
           <div class="text-[11px] muted">What stale homes typically sold for</div>
           <div class="text-[15px] font-semibold num-tabular" style="color: var(--rose);">−5% under their first ask</div>
@@ -844,19 +947,6 @@
       </div>
     </div>
 
-    <!-- Card 6 -->
-    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
-      <div class="relative">
-        <div class="chip chip-emerald mb-4">Where your wealth came from</div>
-        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Owning this house made you 4× more money than paying it off did.</div>
-        <p class="text-[13px] muted leading-relaxed mb-5">Since you bought in 2019, you paid down <span class="text-white">$57,400</span> in principal. The market added <span class="text-white">$235,200</span> on top. Your house did 80% of the work. You did 20%.</p>
-        <div class="panel-2 p-3 flex items-center justify-between">
-          <div class="text-[11px] muted">Total wealth this house has built</div>
-          <div class="text-[15px] font-semibold num-tabular">$292,600</div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ───────────────────────────── SECTION: PRICE JOURNEY (Constellation MCP) ───────────────────────────── -->
@@ -996,12 +1086,12 @@
   <section class="panel p-6 ring-soft" style="border-color: rgba(52,211,153,0.28); background: linear-gradient(180deg, rgba(52,211,153,0.05), transparent);">
     <div class="grid grid-cols-12 gap-6 items-center">
       <div class="col-span-7">
-        <div class="text-[14px] font-semibold mb-1">Want Reed to call you the day any of these moves?</div>
-        <div class="text-[13px] muted">15 minutes. Free. We walk through what to do — no listing pitch, no commitment.</div>
+        <div class="text-[14px] font-semibold mb-1">The day the Fed moves, the day a comp sells, the day your number jumps — get a text.</div>
+        <div class="text-[13px] muted">Or grab 15 minutes with Reed. No listing pitch. No commitment. We'll tell you if waiting is the smarter move — usually it is.</div>
       </div>
       <div class="col-span-5 flex gap-2 justify-end">
-        <button class="px-4 py-2.5 rounded-lg text-[13px] font-semibold" style="background: var(--emerald); color: #0a0a0b;">Book 15 min →</button>
-        <button class="px-4 py-2.5 rounded-lg text-[13px] font-medium border hairline-2 hover:bg-[#1a1a20]">Text me when this moves</button>
+        <button class="px-4 py-2.5 rounded-lg text-[13px] font-semibold" style="background: var(--emerald); color: #0a0a0b;">15 min with Reed →</button>
+        <button class="px-4 py-2.5 rounded-lg text-[13px] font-medium border hairline-2 hover:bg-[#1a1a20]">Text me on Fed day</button>
       </div>
     </div>
   </section>
@@ -1011,7 +1101,7 @@
     <div class="col-span-12 flex items-end justify-between">
       <div>
         <div class="text-[12px] muted uppercase tracking-wider mb-2">Your home, week by week</div>
-        <h2 class="serif text-[36px] font-semibold tracking-tight">This isn't a one-time report. It watches your house every Monday.</h2>
+        <h2 class="serif text-[36px] font-semibold tracking-tight">Most agents check in once a year. Reed checks in every Monday.</h2>
       </div>
       <div class="chip chip-neutral">Free · weekly digest</div>
     </div>
@@ -1061,7 +1151,7 @@
           Ask the questions you'd never ask an agent in person.
         </h2>
         <p class="text-[15px] muted leading-relaxed max-w-[520px] mb-6">
-          No commission on the line. No call-back script. Reed answers with the math — and tells you when waiting is the smart move.
+          Ask anything. Reed answers with the math. And when the answer is "don't sell yet" — which is most of the time — that's what Reed says.
         </p>
 
         <div class="panel-2 p-2 flex items-center gap-2">
@@ -1146,29 +1236,34 @@
     }
   });
 
-  /* ───────── Stage selector — adapts hero subtitle + secondary CTA ───────── */
+  /* ───────── Stage selector — adapts hero, sell-window heading, and modal aggression ───────── */
   const heroSub = document.getElementById('hero-subtitle');
   const heroCta2 = document.getElementById('hero-cta-secondary');
+  const swTitle = document.getElementById('sell-window-title');
+  const swEyebrow = document.getElementById('sell-window-eyebrow');
   const stageCopy = {
-    curious:   { sub: 'Quietly: this house has been working for you. <span class="text-white font-medium">$2,010/month</span> in equity, every month, for nothing. Below: where it came from, what comes next, and — only if you want it — what selling could look like.', cta: 'What is my house earning?' },
-    watching:  { sub: 'Right now: <span class="text-white font-medium">$847,200</span>, up <span class="text-white font-medium">$3,400</span> this week. Three things in the next 90 days could move it. We watch them so you don\'t have to.', cta: 'What could change my number?' },
-    selling90: { sub: 'List by May 31 and you walk away with <span class="text-white font-medium">$818,000</span>. Wait until July and you walk away with $17,000 less. Below: the four sales that prove it, and what to do this week.', cta: 'Should I sell now?' },
-    shopping:  { sub: 'You\'ve seen Zillow\'s number. You\'ve heard two agents\' numbers. Here\'s the one based on the four homes that actually sold near yours — with the math next to every claim.', cta: 'Compare to Zillow\'s estimate' }
+    curious:     { sub: 'This house has been quietly working for you — <span class="text-white font-medium">$2,010 a month</span> in equity, every month, for nothing. Below: where that came from. No pressure to do anything about it.', cta: 'What is my house earning?', swEyebrow: 'If you ever did decide to sell', swTitle: 'Here\'s what selling would look like — when you\'re ready.' },
+    watching:    { sub: 'Right now: <span class="text-white font-medium">$847,200</span>, up <span class="text-white font-medium">$3,400</span> this week. Three things in the next 90 days could move it. We watch them so you don\'t have to.', cta: 'What could change my number?', swEyebrow: 'Your sell window, when you\'re ready', swTitle: 'When the time comes, here\'s what the math says.' },
+    considering: { sub: 'You\'re thinking 6–12 months out. Two things matter most: where prices go from here, and what you should fix vs not fix. Below: both, with numbers.', cta: 'When should I plan to list?', swEyebrow: 'Your sell window — 6 to 12 months out', swTitle: 'List by fall and you net more than waiting until spring. Here\'s why.' },
+    selling90:   { sub: 'List by May 31 and you walk away with <span class="text-white font-medium">$818,000</span>. Wait until July and you walk away with $17,000 less. Below: the four sales that prove it, and what to do this week.', cta: 'Should I sell now?', swEyebrow: 'Should you sell now?', swTitle: 'List in the next 3 weeks. Wait, and you lose $17,000.' },
+    shopping:    { sub: 'You\'ve seen Zillow\'s number. You\'ve heard two agents\' numbers. Here\'s the one based on the four homes that actually sold near yours — with the math next to every claim.', cta: 'Compare to Zillow\'s estimate', swEyebrow: 'Your sell window vs what an agent will tell you', swTitle: 'List in the next 3 weeks. Higher numbers from agents come with conditions.' }
   };
-  document.querySelectorAll('.stage-pill').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const stage = btn.dataset.stage;
-      document.querySelectorAll('.stage-pill').forEach(b => b.removeAttribute('data-active'));
-      btn.setAttribute('data-active', 'true');
-      try { localStorage.setItem('reed-stage', stage); } catch(e) {}
-      const copy = stageCopy[stage];
-      if (copy && heroSub) heroSub.innerHTML = copy.sub;
-      if (copy && heroCta2) heroCta2.textContent = copy.cta;
-    });
-  });
+  let currentStage = 'selling90';
+  const applyStage = (stage) => {
+    currentStage = stage;
+    document.querySelectorAll('.stage-pill').forEach(b => b.removeAttribute('data-active'));
+    document.querySelector(`.stage-pill[data-stage="${stage}"]`)?.setAttribute('data-active', 'true');
+    try { localStorage.setItem('reed-stage', stage); } catch(e) {}
+    const copy = stageCopy[stage]; if (!copy) return;
+    if (heroSub) heroSub.innerHTML = copy.sub;
+    if (heroCta2) heroCta2.textContent = copy.cta;
+    if (swTitle) swTitle.textContent = copy.swTitle;
+    if (swEyebrow) swEyebrow.textContent = copy.swEyebrow;
+  };
+  document.querySelectorAll('.stage-pill').forEach(btn => btn.addEventListener('click', () => applyStage(btn.dataset.stage)));
   try {
     const saved = localStorage.getItem('reed-stage');
-    if (saved) document.querySelector(`.stage-pill[data-stage="${saved}"]`)?.click();
+    if (saved && stageCopy[saved]) applyStage(saved);
   } catch(e) {}
 
   /* ───────── Save modal ───────── */
@@ -1184,10 +1279,16 @@
     if (card) card.innerHTML = '<div class="text-center py-6"><div class="serif text-[24px] font-semibold mb-2">You\'re in.</div><div class="text-[13px] muted">Next Monday — and only when something moves by more than $5k. That\'s our promise.</div></div>';
     setTimeout(closeModal, 1800);
   });
-  // Trigger modal after 35s on first visit, or scroll past comp section
+  // Auto-trigger modal — stage-aware. Curious: never. Watching/considering: 90s. Selling90/shopping: 35s.
   let modalShown = false;
   const showOnce = () => { if (modalShown) return; modalShown = true; openModal(); };
-  setTimeout(() => { try { if (!localStorage.getItem('reed-saved')) showOnce(); } catch(e) { showOnce(); } }, 35000);
+  const modalDelays = { curious: null, watching: 90000, considering: 60000, selling90: 35000, shopping: 35000 };
+  const scheduleModal = () => {
+    const delay = modalDelays[currentStage];
+    if (delay == null) return;
+    setTimeout(() => { try { if (!localStorage.getItem('reed-saved')) showOnce(); } catch(e) { showOnce(); } }, delay);
+  };
+  scheduleModal();
 
   /* ───────── Ask Reed — interactive chip responses ───────── */
   const responses = {
@@ -1237,6 +1338,68 @@
     document.getElementById('ask-answer-card')?.scrollIntoView({behavior:'smooth', block:'center'});
   };
   document.querySelectorAll('[data-q]').forEach(el => el.addEventListener('click', () => renderAnswer(el.dataset.q)));
+
+  /* ───────── Free-text Ask Reed ───────── */
+  const handleAskSubmit = () => {
+    const inputEl = document.getElementById('ask-input');
+    const q = (inputEl?.value || '').trim();
+    if (!q) return;
+    const eyebrow = document.getElementById('ask-card-eyebrow');
+    const qEl = document.getElementById('ask-q');
+    const aEl = document.getElementById('ask-a');
+    const fEl = document.getElementById('ask-followups');
+    if (eyebrow) eyebrow.textContent = 'Reed is on it';
+    if (qEl) qEl.textContent = '"' + q + '"';
+    if (aEl) aEl.innerHTML = '<span class="text-white">Good question. Reed is checking the comps and the math now.</span><br><br><span class="muted">For your specific situation, the answer needs your loan balance and any closing costs unique to your sale (e.g. transfer tax, HOA dues). Save your report and we\'ll email you the full answer within 15 minutes — with the math, not a sales pitch.</span>';
+    if (fEl) fEl.innerHTML = '<button onclick="document.getElementById(\'save-report-nav\').click()" class="chip chip-emerald hover:opacity-90 transition">Save report + email me the answer</button><button class="chip chip-neutral hover:bg-[#22222a] transition">Show what data Reed needs</button>';
+    document.getElementById('ask-answer-card')?.scrollIntoView({behavior:'smooth', block:'center'});
+  };
+  document.getElementById('ask-submit')?.addEventListener('click', handleAskSubmit);
+  document.getElementById('ask-input')?.addEventListener('keydown', (e) => { if (e.key === 'Enter') handleAskSubmit(); });
+
+  /* ───────── Counter-offer reconciler ───────── */
+  const parseAgentNum = (s) => {
+    const cleaned = (s || '').replace(/[^0-9.]/g, '');
+    let n = parseFloat(cleaned);
+    if (!isFinite(n)) return null;
+    if (n < 10000) n = n * 1000;  // accept "920" or "920k" → 920000
+    return Math.round(n);
+  };
+  const reconcileAgent = (n) => {
+    const reedAvm = 847200;
+    const delta = n - reedAvm;
+    const fmt = (x) => '$' + (Math.abs(x) >= 1000 ? (x/1000).toFixed(0) + 'k' : x.toLocaleString());
+    if (n < 820000) return {
+      tone: 'rose',
+      title: 'They\'re sandbagging.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">' + fmt(delta) + '</span> below our $847k. Either they want to underprice for a fast sale (good for them, bad for you) or they\'re using stale comps. The four real recent sales near you support $865k–$885k. <span class="text-white">Push back.</span>'
+    };
+    if (n <= 890000) return {
+      tone: 'emerald',
+      title: 'They\'re in the right zone.',
+      body: '<span class="text-white">' + fmt(n) + '</span> sits inside our $865k–$885k recommended band (we estimate $847k as your honest mid-market value). This agent is being straight with you. Ask them: <span class="text-white">"What\'s your evidence for not going higher?"</span> If they have specific recent comps, trust them. If they hand-wave, push to $885k.'
+    };
+    if (n <= 920000) return {
+      tone: 'amber',
+      title: 'Possible — with conditions.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--amber);">+' + fmt(delta) + '</span> above our $847k. To hit it, three things have to go right: (1) inventory has to stay flat (it\'s growing), (2) you need 1+ buyer over the $900k pricing wall (only 31 of 47 are pre-approved that high), (3) no price cuts — once you cut, you sit. Ask the agent: <span class="text-white">"What\'s your plan if we don\'t get an offer in 14 days?"</span>'
+    };
+    return {
+      tone: 'rose',
+      title: 'They\'re fishing for the listing.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">+' + fmt(delta) + '</span> above our $847k. This is a classic listing-presentation tactic: quote high, win the listing, push two price cuts in 60 days, blame "the market." 38% of homes priced above $900k in your zip had to cut. <span class="text-white">If you sign, you\'re likely sitting at $850k by August.</span>'
+    };
+  };
+  document.getElementById('agent-submit')?.addEventListener('click', () => {
+    const v = document.getElementById('agent-num')?.value;
+    const n = parseAgentNum(v);
+    const out = document.getElementById('agent-answer');
+    if (!n || !out) return;
+    const r = reconcileAgent(n);
+    const colorVar = r.tone === 'emerald' ? 'var(--emerald)' : r.tone === 'amber' ? 'var(--amber)' : 'var(--rose)';
+    out.innerHTML = '<div class="chip chip-' + r.tone + ' mb-3">Reed\'s read</div><div class="text-[15px] font-semibold mb-2" style="color: ' + colorVar + ';">' + r.title + '</div><div class="text-[13px] leading-relaxed muted">' + r.body + '</div><div class="mt-4 flex gap-2"><button onclick="document.getElementById(\'save-report-nav\').click()" class="chip chip-emerald hover:opacity-90">Email me this analysis</button><button class="chip chip-neutral hover:bg-[#22222a]">Show the comps</button></div>';
+  });
+  document.getElementById('agent-num')?.addEventListener('keydown', (e) => { if (e.key === 'Enter') document.getElementById('agent-submit')?.click(); });
 
   // Forecast chart
   const fcLabels = ['Now', '+2w', '+4w', '+6w', '+8w', '+10w', '+12w', '+14w', '+16w', '+18w', '+20w'];
