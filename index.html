@@ -233,17 +233,16 @@
 <header style="border-bottom: 1px solid var(--line); background: rgba(8,8,10,0.7); backdrop-filter: blur(12px);">
   <div class="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <!-- Signature mark: serif R inside an emerald circle -->
       <div style="width: 30px; height: 30px; border-radius: 999px; border: 1px solid var(--emerald-line); background: rgba(52,211,153,0.06); display: flex; align-items: center; justify-content: center;">
         <span class="serif" style="color: var(--emerald); font-size: 16px; font-weight: 600; line-height: 1; margin-top: -1px;">R</span>
       </div>
       <div class="leading-tight">
-        <div class="text-[13px] font-semibold tracking-tight" style="letter-spacing: -0.01em;">Reed</div>
-        <div class="text-[10px] muted-2 uppercase" style="letter-spacing: 0.18em;">By Roam</div>
+        <div class="text-[14px] font-semibold tracking-tight" style="letter-spacing: -0.01em;">Reed</div>
+        <div class="text-[11px] muted-2">A Roam product</div>
       </div>
     </div>
     <div class="flex items-center gap-2">
-      <div class="text-[11px] muted-2 mr-2 hidden md:block">No. 047 · May 5, 2026</div>
+      <div class="text-[12px] muted mr-2 hidden md:block">Your home report · May 5</div>
       <button id="save-report-nav" class="btn btn-primary" style="padding: 7px 14px; font-size: 12px;">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 5v14l7-4 7 4V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         Save my report
@@ -256,31 +255,31 @@
 <!-- ───────────── STAGE SELECTOR (sticky) ───────────── -->
 <div id="stage-bar" class="sticky top-0 z-30" style="border-bottom: 1px solid var(--line); background: rgba(8,8,10,0.78); backdrop-filter: blur(14px);">
   <div class="max-w-[1200px] mx-auto px-8 py-3 flex items-center gap-2 overflow-x-auto">
-    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-2); margin-right: 6px; flex-shrink: 0;">I'm</span>
+    <span class="text-[12px] muted mr-2 shrink-0">I'm —</span>
     <button data-stage="curious"    class="stage-pill chip chip-neutral whitespace-nowrap">Just curious</button>
     <button data-stage="watching"   class="stage-pill chip chip-neutral whitespace-nowrap">Watching the market</button>
     <button data-stage="considering" class="stage-pill chip chip-neutral whitespace-nowrap">Selling in 6–12 months</button>
     <button data-stage="selling90"  class="stage-pill chip chip-neutral whitespace-nowrap" data-active="true">Selling in 90 days</button>
     <button data-stage="shopping"   class="stage-pill chip chip-neutral whitespace-nowrap">Comparing agents</button>
-    <span class="ml-auto text-[10px] muted-2 shrink-0 hidden md:inline" style="letter-spacing: 0.05em;">Reed will tune this report</span>
+    <span class="ml-auto text-[12px] muted shrink-0 hidden md:inline">We'll tune the report for you</span>
   </div>
 </div>
 
-<!-- ───────────── WHAT CHANGED + TRUST — combined into one elegant strip ───────────── -->
+<!-- ───────────── WHAT CHANGED + TRUST ───────────── -->
 <div style="border-bottom: 1px solid var(--line); background: var(--bg-elevated);">
   <div class="max-w-[1200px] mx-auto px-8 py-3.5 flex items-center justify-between gap-8">
-    <div class="flex items-center gap-6 text-[12px] flex-wrap">
+    <div class="flex items-center gap-6 text-[13px] flex-wrap">
       <div class="flex items-center gap-2 shrink-0">
         <span class="dot pulse" style="background: var(--emerald);"></span>
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-2);">Since last Mon</span>
+        <span class="muted">Since last Monday</span>
       </div>
-      <div class="flex items-center gap-1.5"><span class="muted">Value</span><span class="num-tabular font-semibold" style="color: var(--emerald);">+$3,400</span></div>
-      <div class="flex items-center gap-1.5 hidden lg:flex"><span class="muted">New comp</span><span class="text-white">457 Sinclair · $905k</span></div>
-      <div class="flex items-center gap-1.5"><span class="muted">Buyers</span><span class="num-tabular font-semibold" style="color: var(--emerald);">47 ↑ 38</span></div>
+      <div class="flex items-center gap-1.5"><span class="muted">Your home value</span><span class="num-tabular font-semibold" style="color: var(--emerald);">up $3,400</span></div>
+      <div class="flex items-center gap-1.5 hidden lg:flex"><span class="muted">New sale nearby</span><span class="text-white">457 Sinclair · $905,000</span></div>
+      <div class="flex items-center gap-1.5"><span class="muted">Buyers searching</span><span class="num-tabular font-semibold" style="color: var(--emerald);">47, up from 38</span></div>
     </div>
     <div class="flex items-center gap-3 shrink-0">
-      <span class="text-[11px] muted hidden md:inline">No agent calls. No spam. We earn only when you sell.</span>
-      <span class="muted-2 hover:text-white text-[10px] uppercase underline decoration-dotted has-methodology" tabindex="0" style="cursor:help; letter-spacing: 0.12em;">How we make money<span class="methodology-pop" style="left:auto; right:0; min-width: 320px;"><span class="text-white block mb-1.5 text-[12px] font-semibold">Where Reed's revenue comes from</span>This report is free and always will be. We earn one thing only: a flat listing fee — about 1% of sale price — and only if you choose us to sell your home. We don't take referral fees from other agents. We don't sell your contact info. We don't run ads to you. If you never list with us, we never make a dollar from you.</span></span>
+      <span class="text-[12px] muted hidden md:inline">No agent calls. No spam. We earn only when you sell.</span>
+      <span class="muted hover:text-white text-[12px] underline decoration-dotted has-methodology" tabindex="0" style="cursor:help;">How we make money<span class="methodology-pop" style="left:auto; right:0; min-width: 320px;"><span class="text-white block mb-1.5 text-[12px] font-semibold">Where our money comes from</span>This report is free and always will be. We make money one way only: a flat listing fee — about 1% of the sale price — and only if you choose us to sell your home. We don't take referral fees from other agents. We don't sell your contact info. We don't run ads to you. If you never list with us, we never make a dollar from you.</span></span>
     </div>
   </div>
 </div>
@@ -289,19 +288,20 @@
 
   <!-- ───────────────────────────── HERO ───────────────────────────── -->
   <section class="relative" style="padding-top: 16px;">
-    <!-- Atmospheric backdrop -->
     <div class="absolute pointer-events-none" style="top: -180px; left: 50%; transform: translateX(-50%); width: 1200px; height: 700px; background: radial-gradient(50% 50% at 50% 30%, rgba(52,211,153,0.08), transparent 70%);"></div>
     <div class="absolute inset-0 pointer-events-none grid-noise opacity-40"></div>
 
     <div class="relative grid grid-cols-12 gap-16">
-      <!-- Left: editorial copy -->
-      <div class="col-span-7" style="padding-top: 16px;">
-        <!-- Editorial dateline -->
-        <div class="flex items-center gap-3 mb-12">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--muted-2); text-transform: uppercase;">A REED WEALTH REPORT · No. 047 · May 5, 2026</div>
+      <div class="col-span-7" style="padding-top: 8px;">
+        <div class="flex items-center gap-2 mb-10">
+          <div class="chip chip-emerald">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Top 12% on your block
+          </div>
+          <div class="chip chip-neutral">1247 Highland View Drive · Atlanta, GA</div>
         </div>
 
-        <div class="serif text-[13px] mb-8" style="color: var(--muted); font-style: italic;">For Jordan, at 1247 Highland View Drive — most people learn what their house is worth on the day they sell it. You're going to learn it every Monday.</div>
+        <div class="text-[14px] muted mb-7 leading-relaxed max-w-[520px]">Hi Jordan — most people only find out what their house is worth on the day they sell it. You're going to know every week.</div>
 
         <h1 class="serif-display mb-10" style="font-size: 92px; line-height: 0.94; font-weight: 500; letter-spacing: -0.045em;">
           You got<br>
@@ -310,63 +310,54 @@
         </h1>
 
         <p id="hero-subtitle" class="text-[18px] leading-[1.55] max-w-[540px] muted" style="font-weight: 400;">
-          List by May 31 and you walk away with <span class="text-white font-medium">$818,000</span>. Wait until July and you walk away with $17,000 less. Below: the four sales that prove it, and what to do this week.
+          If you sell by May 31, you walk away with <span class="text-white font-medium">$818,000</span> in your pocket. Wait until July and that drops by $17,000. Below: the four houses that prove it, and what to do this week.
         </p>
 
         <div class="mt-12 flex flex-wrap items-center gap-3">
-          <a href="#alpha" class="btn btn-primary" style="padding: 12px 20px; font-size: 14px;">Show me where my $47k came from <span style="margin-left: 4px; opacity: .7;">→</span></a>
+          <a href="#alpha" class="btn btn-primary" style="padding: 12px 20px; font-size: 14px;">Show me where my $47,200 came from <span style="margin-left: 4px; opacity: .7;">→</span></a>
           <a id="hero-cta-secondary" href="#sell-window" class="btn btn-secondary" style="padding: 12px 20px; font-size: 14px;">Should I sell now?</a>
           <button id="hero-cta-tertiary" onclick="document.getElementById('save-report-nav').click()" class="btn btn-ghost" style="padding: 12px 16px; font-size: 14px;">Save for later</button>
         </div>
       </div>
 
-      <!-- Right: composed snapshot — feels like a tear-out card from a magazine -->
+      <!-- Right: composed snapshot — feels like a real card -->
       <div class="col-span-5">
         <div class="panel panel-elev relative overflow-hidden" style="padding: 32px;">
-          <!-- Marker corner -->
-          <div class="absolute" style="top: 0; right: 0; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--muted-2);">SNAPSHOT</div>
-
-          <div class="flex items-center gap-2 mb-6">
-            <span class="dot pulse" style="background: var(--emerald);"></span>
-            <span class="text-[10px] uppercase tracking-[0.18em]" style="color: var(--emerald);">Live</span>
-            <span class="text-[10px] muted-2">· refreshed today</span>
+          <div class="flex items-center justify-between mb-7">
+            <div class="flex items-center gap-2">
+              <span class="dot pulse" style="background: var(--emerald);"></span>
+              <span class="text-[12px] font-medium" style="color: var(--emerald);">Updated today</span>
+            </div>
+            <div class="text-[11px] muted-2">Your home, right now</div>
           </div>
 
           <div class="mb-8">
-            <div class="text-[12px] muted mb-2">Your home is worth</div>
-            <div class="serif num-display has-methodology" tabindex="0" style="font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.035em;">$847,200<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">How we got this number</span>Average of 4 nearby home sales from the last 60 days, adjusted up or down for: lot size, school zone, kitchen condition, and yard. Tighter range than Zillow because we use only the comps that actually match your home.</span></div>
-            <div class="text-[12px] mt-3 muted-2">Honest range <span class="text-white num-tabular">$836k</span> to <span class="text-white num-tabular">$858k</span></div>
+            <div class="text-[13px] muted mb-2">Your house is worth</div>
+            <div class="serif num-display has-methodology" tabindex="0" style="font-size: 60px; font-weight: 600; line-height: 1; letter-spacing: -0.035em;">$847,200<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">How we got this number</span>We averaged the four most recent home sales near you, adjusting up or down for lot size, school zone, kitchen condition, and yard. Our range is tighter than Zillow's because we only use the homes that actually match yours.</span></div>
+            <div class="text-[12px] mt-3 muted">Honest range: <span class="text-white num-tabular">$836,000</span> to <span class="text-white num-tabular">$858,000</span></div>
           </div>
 
           <div class="grid grid-cols-2 gap-px" style="background: var(--line);">
-            <div style="background: var(--panel); padding: 16px;">
-              <div class="text-[11px] muted mb-1.5">Up this year</div>
-              <div class="num-display text-[18px] font-semibold" style="color: var(--emerald);">+$47,200</div>
-              <div class="text-[10px] muted-2 mt-1">vs neighbors +2.8%</div>
+            <div style="background: var(--panel); padding: 18px;">
+              <div class="text-[12px] muted mb-2">Up this year</div>
+              <div class="num-display text-[20px] font-semibold" style="color: var(--emerald);">+$47,200</div>
+              <div class="text-[11px] muted-2 mt-1">Neighbors +$23,400</div>
             </div>
-            <div style="background: var(--panel); padding: 16px;">
-              <div class="text-[11px] muted mb-1.5">Beat block by</div>
-              <div class="num-display text-[18px] font-semibold" style="color: var(--emerald);">+$23,800</div>
-              <div class="text-[10px] muted-2 mt-1">Top 12%</div>
+            <div style="background: var(--panel); padding: 18px;">
+              <div class="text-[12px] muted mb-2">Beat your block by</div>
+              <div class="num-display text-[20px] font-semibold" style="color: var(--emerald);">+$23,800</div>
+              <div class="text-[11px] muted-2 mt-1">Top 12% nearby</div>
             </div>
-            <div style="background: var(--panel); padding: 16px;">
-              <div class="text-[11px] muted mb-1.5">Equity</div>
-              <div class="num-display text-[18px] font-semibold">$391,800</div>
-              <div class="text-[10px] muted-2 mt-1">Mortgage $455k</div>
+            <div style="background: var(--panel); padding: 18px;">
+              <div class="text-[12px] muted mb-2">What you own outright</div>
+              <div class="num-display text-[20px] font-semibold">$391,800</div>
+              <div class="text-[11px] muted-2 mt-1">Mortgage left $455,000</div>
             </div>
-            <div style="background: var(--panel); padding: 16px;">
-              <div class="text-[11px] muted mb-1.5">Days to sell here</div>
-              <div class="num-display text-[18px] font-semibold">19</div>
-              <div class="text-[10px] muted-2 mt-1">↓ from 31 last quarter</div>
+            <div style="background: var(--panel); padding: 18px;">
+              <div class="text-[12px] muted mb-2">How fast homes sell here</div>
+              <div class="num-display text-[20px] font-semibold">19 days</div>
+              <div class="text-[11px] muted-2 mt-1">Down from 31</div>
             </div>
-          </div>
-
-          <div class="mt-6 pt-6 flex items-center justify-between" style="border-top: 1px solid var(--line);">
-            <div class="chip chip-emerald">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Top 12% on your block
-            </div>
-            <div class="text-[10px] muted-2 num-tabular">1247 Highland View Dr</div>
           </div>
         </div>
       </div>
@@ -519,91 +510,97 @@
       <div class="chip chip-neutral">Within 0.5 mi · last 60 days</div>
     </div>
 
-    <!-- Comp Map (SVG) -->
+    <!-- Comp Map (SVG) — house silhouettes + clear labels -->
     <div class="col-span-5 panel ring-soft" style="padding: 24px;">
-      <div class="flex items-baseline justify-between mb-1">
-        <div class="text-[14px] font-medium">Within half a mile</div>
-        <div class="text-[11px] muted-2">last 60 days</div>
-      </div>
-      <div class="text-[12px] muted mb-4">Tap a sale to see what it tells us about your number.</div>
-      <div class="rounded-xl overflow-hidden relative" style="background: linear-gradient(180deg, #0a0a0d 0%, #0c0c10 100%); border: 1px solid var(--line-2); height: 380px;">
-        <svg viewBox="0 0 400 380" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-          <!-- Subtle grid -->
+      <div class="text-[14px] font-medium mb-1">Houses sold within half a mile</div>
+      <div class="text-[13px] muted mb-4">Last 60 days. The four that decide what yours is worth.</div>
+      <div class="rounded-xl overflow-hidden relative" style="background: linear-gradient(180deg, #0a0a0d 0%, #0c0c10 100%); border: 1px solid var(--line-2); height: 420px;">
+        <svg viewBox="0 0 400 420" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-              <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.022)" stroke-width="1"/>
             </pattern>
             <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="rgba(52,211,153,0.35)"/>
-              <stop offset="60%" stop-color="rgba(52,211,153,0.06)"/>
+              <stop offset="0%" stop-color="rgba(52,211,153,0.30)"/>
+              <stop offset="55%" stop-color="rgba(52,211,153,0.05)"/>
               <stop offset="100%" stop-color="rgba(52,211,153,0)"/>
             </pattern>
+            <!-- Reusable house icon -->
+            <symbol id="house" viewBox="0 0 24 24">
+              <path d="M3 12L12 4l9 8v8a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+            </symbol>
           </defs>
-          <rect width="400" height="380" fill="url(#grid)"/>
+          <rect width="400" height="420" fill="url(#grid)"/>
 
-          <!-- Abstract street lines -->
-          <g stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none" stroke-linecap="round">
-            <path d="M 30 110 L 380 110"/>
-            <path d="M 30 200 L 380 200"/>
-            <path d="M 30 290 L 380 290"/>
-            <path d="M 130 30 L 130 360"/>
-            <path d="M 240 30 L 240 360"/>
+          <!-- Streets -->
+          <g stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none">
+            <path d="M 0 110 L 400 110"/>
+            <path d="M 0 220 L 400 220"/>
+            <path d="M 0 320 L 400 320"/>
+            <path d="M 130 0 L 130 420"/>
+            <path d="M 270 0 L 270 420"/>
           </g>
-          <text x="22" y="106" fill="var(--muted-3)" font-size="9" letter-spacing="0.1em">HIGHLAND AVE</text>
-          <text x="22" y="196" fill="var(--muted-3)" font-size="9" letter-spacing="0.1em">EUCLID AVE</text>
-          <text x="22" y="286" fill="var(--muted-3)" font-size="9" letter-spacing="0.1em">SINCLAIR AVE</text>
+          <text x="14" y="105" fill="rgba(255,255,255,0.18)" font-size="10" font-weight="500">Highland Ave</text>
+          <text x="14" y="215" fill="rgba(255,255,255,0.18)" font-size="10" font-weight="500">Euclid Ave</text>
+          <text x="14" y="315" fill="rgba(255,255,255,0.18)" font-size="10" font-weight="500">Sinclair Ave</text>
 
           <!-- Halo around your home -->
-          <circle cx="180" cy="200" r="80" fill="url(#halo)"/>
+          <circle cx="180" cy="220" r="92" fill="url(#halo)"/>
 
-          <!-- Comp markers -->
+          <!-- Comp A — 1183 Highland (sold high, fast) -->
           <g class="comp-marker" data-comp="A" style="cursor:pointer;">
-            <circle cx="160" cy="110" r="14" fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1.5"/>
-            <text x="160" y="114" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">A</text>
-            <text x="160" y="92" fill="var(--text)" font-size="10" text-anchor="middle">1183 Highland</text>
-            <text x="160" y="138" fill="var(--muted-2)" font-size="9" text-anchor="middle" class="num-tabular">$891k · 6 days</text>
+            <circle cx="170" cy="110" r="22" fill="#0c0c10" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+            <use href="#house" x="158" y="98" width="24" height="24" color="#34d399"/>
+            <text x="170" y="80" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">$891,000</text>
+            <text x="170" y="148" fill="var(--muted)" font-size="10" text-anchor="middle">1183 Highland</text>
+            <text x="170" y="161" fill="#34d399" font-size="10" text-anchor="middle">Sold in 6 days</text>
           </g>
 
+          <!-- Comp B — 998 Euclid (mid range, slower) -->
           <g class="comp-marker" data-comp="B" style="cursor:pointer;">
-            <circle cx="295" cy="200" r="14" fill="rgba(139,149,245,0.12)" stroke="#8b95f5" stroke-width="1.5"/>
-            <text x="295" y="204" fill="#8b95f5" font-size="11" font-weight="600" text-anchor="middle">B</text>
-            <text x="295" y="182" fill="var(--text)" font-size="10" text-anchor="middle">998 Euclid</text>
-            <text x="295" y="228" fill="var(--muted-2)" font-size="9" text-anchor="middle" class="num-tabular">$815k · 22 days</text>
+            <circle cx="310" cy="220" r="22" fill="#0c0c10" stroke="rgba(139,149,245,0.4)" stroke-width="1"/>
+            <use href="#house" x="298" y="208" width="24" height="24" color="#8b95f5"/>
+            <text x="310" y="190" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">$815,000</text>
+            <text x="310" y="258" fill="var(--muted)" font-size="10" text-anchor="middle">998 Euclid</text>
+            <text x="310" y="271" fill="#8b95f5" font-size="10" text-anchor="middle">Sold in 22 days</text>
           </g>
 
+          <!-- Comp C — 1305 Highland (sat too long) -->
           <g class="comp-marker" data-comp="C" style="cursor:pointer;">
-            <circle cx="200" cy="290" r="14" fill="rgba(245,192,56,0.12)" stroke="#f5c038" stroke-width="1.5"/>
-            <text x="200" y="294" fill="#f5c038" font-size="11" font-weight="600" text-anchor="middle">C</text>
-            <text x="200" y="272" fill="var(--text)" font-size="10" text-anchor="middle">1305 Highland</text>
-            <text x="200" y="318" fill="var(--muted-2)" font-size="9" text-anchor="middle" class="num-tabular">$762k · 41 days</text>
+            <circle cx="200" cy="320" r="22" fill="#0c0c10" stroke="rgba(245,192,56,0.4)" stroke-width="1"/>
+            <use href="#house" x="188" y="308" width="24" height="24" color="#f5c038"/>
+            <text x="200" y="290" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">$762,000</text>
+            <text x="200" y="358" fill="var(--muted)" font-size="10" text-anchor="middle">1305 Highland</text>
+            <text x="200" y="371" fill="#f5c038" font-size="10" text-anchor="middle">Sat 41 days</text>
           </g>
 
+          <!-- Comp D — 457 Sinclair (sold over ask) -->
           <g class="comp-marker" data-comp="D" style="cursor:pointer;">
-            <circle cx="320" cy="320" r="14" fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1.5"/>
-            <text x="320" y="324" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">D</text>
-            <text x="320" y="302" fill="var(--text)" font-size="10" text-anchor="middle">457 Sinclair</text>
-            <text x="320" y="348" fill="var(--muted-2)" font-size="9" text-anchor="middle" class="num-tabular">$905k · 8 days</text>
+            <circle cx="330" cy="350" r="22" fill="#0c0c10" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+            <use href="#house" x="318" y="338" width="24" height="24" color="#34d399"/>
+            <text x="330" y="320" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">$905,000</text>
+            <text x="330" y="388" fill="var(--muted)" font-size="10" text-anchor="middle">457 Sinclair</text>
+            <text x="330" y="401" fill="#34d399" font-size="10" text-anchor="middle">Sold in 8 days</text>
           </g>
 
-          <!-- Your home — pulsing star -->
-          <g class="star-pulse" transform="translate(180 200)">
-            <circle r="22" fill="rgba(52,211,153,0.10)"/>
-            <circle r="14" fill="#08080a" stroke="#34d399" stroke-width="2"/>
-            <path d="M 0 -6 L 1.6 -1.8 L 6 -1.8 L 2.4 1.4 L 3.7 6 L 0 3.2 L -3.7 6 L -2.4 1.4 L -6 -1.8 L -1.6 -1.8 Z" fill="#34d399"/>
+          <!-- Your home — pulsing star, larger and unmistakable -->
+          <g class="star-pulse" transform="translate(180 220)">
+            <circle r="32" fill="rgba(52,211,153,0.08)"/>
+            <circle r="22" fill="#0a0a0d" stroke="#34d399" stroke-width="2"/>
+            <use href="#house" x="-12" y="-12" width="24" height="24" color="#34d399"/>
           </g>
-          <text x="180" y="178" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">YOUR HOME</text>
-          <text x="180" y="232" fill="var(--muted-2)" font-size="9" text-anchor="middle" class="num-tabular">$847,200</text>
+          <text x="180" y="178" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">YOUR HOUSE</text>
+          <text x="180" y="262" fill="var(--muted)" font-size="11" text-anchor="middle">1247 Highland View</text>
+          <text x="180" y="276" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">$847,200</text>
         </svg>
-
-        <!-- Legend -->
-        <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px]">
-          <div class="flex items-center gap-3 muted-2">
-            <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:999px; background:#34d399;"></span>Sold high</span>
-            <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:999px; background:#8b95f5;"></span>Mid range</span>
-            <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:999px; background:#f5c038;"></span>Sat too long</span>
-          </div>
-          <span class="muted-3">Schematic — not to scale</span>
+      </div>
+      <div class="mt-3 flex items-center justify-between text-[12px]">
+        <div class="flex items-center gap-3 muted">
+          <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:2px; background:#34d399;"></span>Sold fast</span>
+          <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:2px; background:#8b95f5;"></span>Mid range</span>
+          <span class="flex items-center gap-1.5"><span style="display:inline-block; width:8px; height:8px; border-radius:2px; background:#f5c038;"></span>Sat too long</span>
         </div>
+        <span class="muted-2">Approximate locations</span>
       </div>
     </div>
 
@@ -857,16 +854,11 @@
     </div>
   </section>
 
-  <!-- ───────────────────────────── EDITORIAL PULL QUOTE — moment of breath ───────────────────────────── -->
-  <section class="relative" style="padding: 32px 0;">
+  <!-- ───────────────────────────── PULL QUOTE — seller takeaway moment ───────────────────────────── -->
+  <section class="relative" style="padding: 24px 0;">
     <div class="max-w-[820px] mx-auto text-center">
-      <div class="serif" style="font-size: 44px; line-height: 1.15; font-weight: 400; letter-spacing: -0.025em; color: var(--text-warm);">
-        "The right number isn't the highest one an agent will quote you.<br>It's the one a real buyer pays — <span style="font-style: italic; color: var(--emerald);">in three weeks</span>."
-      </div>
-      <div class="mt-6 flex items-center justify-center gap-3" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--muted-2); text-transform: uppercase;">
-        <span style="width: 24px; height: 1px; background: var(--line-3);"></span>
-        Reed
-        <span style="width: 24px; height: 1px; background: var(--line-3);"></span>
+      <div class="serif" style="font-size: 40px; line-height: 1.2; font-weight: 500; letter-spacing: -0.025em; color: var(--text-warm);">
+        The highest number an agent quotes you<br>isn't your real price. <span style="color: var(--emerald);">The one a real buyer pays in three weeks is.</span>
       </div>
     </div>
   </section>
@@ -874,12 +866,8 @@
   <!-- ───────────────────────────── SECTION: EQUITY-USE BRANCHING ───────────────────────────── -->
   <section class="grid grid-cols-12 gap-6">
     <div class="col-span-12 mb-2">
-      <div class="flex items-baseline gap-3 mb-3">
-        <span class="serif" style="font-size: 14px; color: var(--muted-2); font-weight: 500; letter-spacing: 0.02em;">04</span>
-        <span style="width: 24px; height: 1px; background: var(--line-3);"></span>
-        <div class="text-[11px] uppercase muted" style="letter-spacing: 0.18em;">Your $818k, made real</div>
-      </div>
-      <h2 class="serif text-[40px] font-semibold tracking-tight" style="letter-spacing: -0.025em; line-height: 1.1; max-width: 720px;">What would you actually <em>do</em> with the money?</h2>
+      <div class="text-[12px] uppercase muted mb-3" style="letter-spacing: 0.14em;">Your $818,000, made real</div>
+      <h2 class="serif text-[40px] font-semibold tracking-tight" style="letter-spacing: -0.025em; line-height: 1.1; max-width: 720px;">What would you actually do with the money?</h2>
     </div>
 
     <div class="col-span-4 panel ring-soft transition cursor-pointer overflow-hidden relative" style="padding: 28px;">
@@ -945,29 +933,22 @@
     <div class="absolute pointer-events-none" style="top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(closest-side, rgba(139,149,245,0.06), transparent 70%);"></div>
     <div class="relative grid grid-cols-12 gap-10 items-start">
       <div class="col-span-7">
-        <div class="flex items-baseline gap-3 mb-3">
-          <span class="serif" style="font-size: 14px; color: var(--muted-2); font-weight: 500;">05</span>
-          <span style="width: 24px; height: 1px; background: var(--line-3);"></span>
-          <div class="text-[11px] uppercase muted" style="letter-spacing: 0.18em;">Already talked to an agent?</div>
-        </div>
-        <h3 class="serif text-[34px] font-semibold tracking-tight mb-4" style="line-height: 1.1; letter-spacing: -0.025em;">Two agents, two different numbers? <em style="color: var(--muted);">Run them past Reed.</em></h3>
+        <div class="text-[12px] uppercase muted mb-3" style="letter-spacing: 0.14em;">Already talked to an agent?</div>
+        <h3 class="serif text-[34px] font-semibold tracking-tight mb-4" style="line-height: 1.1; letter-spacing: -0.025em;">Two agents gave you two different numbers? Run them past Reed.</h3>
         <p class="text-[14px] muted mb-7 leading-relaxed max-w-[520px]">Listing agents quote high to win the listing. Reed tells you exactly what would have to be true for that number to hold — and what's likely to break it. No bias. No listing pitch.</p>
         <div class="panel-2" style="padding: 6px;">
           <div class="flex items-center gap-1">
-            <span class="text-[12px] muted px-3 shrink-0" style="font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;">$</span>
+            <span class="text-[18px] muted px-3 shrink-0 font-medium">$</span>
             <input id="agent-num" type="text" placeholder="920,000" class="flex-1 bg-transparent outline-none text-[18px] py-2.5 num-tabular font-medium" style="letter-spacing: -0.01em;" />
-            <button id="agent-submit" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px;">Reconcile <span style="margin-left: 4px; opacity: .7;">→</span></button>
+            <button id="agent-submit" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px;">Check this number <span style="margin-left: 4px; opacity: .7;">→</span></button>
           </div>
         </div>
-        <div class="text-[11px] muted-2 mt-3">Most second opinions cost $400 and three days. This one is free, and it shows the math.</div>
+        <div class="text-[12px] muted mt-3">A real second opinion costs $400 and takes three days. This one is free, and it shows the math.</div>
       </div>
       <div class="col-span-5">
         <div class="panel-2 ring-soft" id="agent-answer" style="padding: 24px;">
-          <div class="flex items-center gap-2 mb-3">
-            <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--muted-3);"></span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-2);">Reed will say</span>
-          </div>
-          <div class="text-[14px] leading-relaxed muted">Type the number an agent quoted you. Reed will reconcile it against your <span class="text-white num-tabular">$847,200</span> estimate, the four real comps, and current demand — in five seconds, with the math.</div>
+          <div class="text-[12px] muted mb-3">Reed's answer will appear here</div>
+          <div class="text-[14px] leading-relaxed muted">Type the number your agent quoted. We'll tell you whether it's honest, optimistic, or a fishing tactic — and exactly what would have to be true for it to hold.</div>
         </div>
       </div>
     </div>
@@ -1079,47 +1060,43 @@
   <!-- ───────────────────────────── SECTION: WHAT WE MIGHT BE WRONG ABOUT (self-skepticism) ───────────────────────────── -->
   <section class="grid grid-cols-12 gap-6">
     <div class="col-span-12 mb-2">
-      <div class="flex items-baseline gap-3 mb-3">
-        <span class="serif" style="font-size: 14px; color: var(--muted-2); font-weight: 500;">06</span>
-        <span style="width: 24px; height: 1px; background: var(--line-3);"></span>
-        <div class="text-[11px] uppercase" style="letter-spacing: 0.18em; color: var(--amber);">What we might be wrong about</div>
-      </div>
-      <h2 class="serif text-[40px] font-semibold tracking-tight" style="letter-spacing: -0.025em; line-height: 1.1; max-width: 740px;">Three places our $847,200 could be off.</h2>
-      <div class="text-[14px] muted mt-4 max-w-[640px] leading-relaxed">Most reports give you one confident number. Reed gives you the number, plus the three places it might be wrong. Because if you're going to bet a million dollars on a price, you should know where the model is squinting.</div>
+      <div class="text-[12px] uppercase mb-3" style="letter-spacing: 0.14em; color: var(--amber);">Where we might be wrong</div>
+      <h2 class="serif text-[40px] font-semibold tracking-tight" style="letter-spacing: -0.025em; line-height: 1.1; max-width: 740px;">Three reasons your house could actually be worth <em>more</em> than $847,200.</h2>
+      <div class="text-[14px] muted mt-4 max-w-[640px] leading-relaxed">No agent will ever tell you this. Most home reports give you one confident number and stop. We give you the number — plus the three places we know we might be underselling you.</div>
     </div>
 
     <div class="col-span-12">
       <div class="grid grid-cols-3 gap-px" style="background: var(--amber-line); border: 1px solid var(--amber-line); border-radius: 14px; overflow: hidden;">
         <div style="background: var(--panel); padding: 28px;">
-          <div class="serif" style="font-size: 14px; color: var(--amber); font-weight: 500;">i.</div>
-          <div class="serif text-[20px] leading-tight font-semibold mt-2 mb-3" style="letter-spacing: -0.015em;">Comp B's small yard</div>
-          <div class="text-[13px] leading-relaxed muted mb-4">998 Euclid had a 0.19 acre lot vs your 0.31. We adjusted up by $22k. If Atlanta's real yard premium runs closer to $40k per 0.1 acre — and there's evidence it does — your home is worth more.</div>
+          <div class="text-[11px] uppercase mb-3" style="letter-spacing: 0.14em; color: var(--amber);">Reason 1</div>
+          <div class="serif text-[20px] leading-tight font-semibold mb-3" style="letter-spacing: -0.015em;">Your yard might be worth more than we credited.</div>
+          <div class="text-[13px] leading-relaxed muted mb-4">One of our comps had a much smaller yard. We adjusted for it, but Atlanta buyers have been paying real money for outdoor space lately. If that holds, your number goes up.</div>
           <div class="flex items-baseline justify-between pt-4" style="border-top: 1px solid var(--line);">
-            <span class="text-[11px] muted">Possible upside</span>
-            <span class="serif num-display text-[18px] font-semibold" style="color: var(--amber);">+$8,000</span>
+            <span class="text-[12px] muted">Could add</span>
+            <span class="serif num-display text-[20px] font-semibold" style="color: var(--amber);">+$8,000</span>
           </div>
         </div>
         <div style="background: var(--panel); padding: 28px;">
-          <div class="serif" style="font-size: 14px; color: var(--amber); font-weight: 500;">ii.</div>
-          <div class="serif text-[20px] leading-tight font-semibold mt-2 mb-3" style="letter-spacing: -0.015em;">Your finished basement</div>
-          <div class="text-[13px] leading-relaxed muted mb-4">None of the four comps have one. We credited +$14k based on zip-wide averages. Once a comparable home with a basement closes near you, the model recalibrates upward.</div>
+          <div class="text-[11px] uppercase mb-3" style="letter-spacing: 0.14em; color: var(--amber);">Reason 2</div>
+          <div class="serif text-[20px] leading-tight font-semibold mb-3" style="letter-spacing: -0.015em;">Your finished basement isn't priced in yet.</div>
+          <div class="text-[13px] leading-relaxed muted mb-4">None of the four nearby sales had one. We added $14,000 based on the average for your zip — but as soon as a similar house with a finished basement sells, your number jumps.</div>
           <div class="flex items-baseline justify-between pt-4" style="border-top: 1px solid var(--line);">
-            <span class="text-[11px] muted">Possible upside</span>
-            <span class="serif num-display text-[18px] font-semibold" style="color: var(--amber);">+$12,000</span>
+            <span class="text-[12px] muted">Could add</span>
+            <span class="serif num-display text-[20px] font-semibold" style="color: var(--amber);">+$12,000</span>
           </div>
         </div>
         <div style="background: var(--panel); padding: 28px;">
-          <div class="serif" style="font-size: 14px; color: var(--amber); font-weight: 500;">iii.</div>
-          <div class="serif text-[20px] leading-tight font-semibold mt-2 mb-3" style="letter-spacing: -0.015em;">The BeltLine bump hasn't shown up yet</div>
-          <div class="text-[13px] leading-relaxed muted mb-4">Approval was April 30. The sales we used closed before that. The next 60 days of comps may push your number up as the BeltLine premium prices in.</div>
+          <div class="text-[11px] uppercase mb-3" style="letter-spacing: 0.14em; color: var(--amber);">Reason 3</div>
+          <div class="serif text-[20px] leading-tight font-semibold mb-3" style="letter-spacing: -0.015em;">The BeltLine boost hasn't shown up in sales yet.</div>
+          <div class="text-[13px] leading-relaxed muted mb-4">The new BeltLine extension was just approved on April 30. The sales we used closed before that. Over the next two months, expect the boost to show up.</div>
           <div class="flex items-baseline justify-between pt-4" style="border-top: 1px solid var(--line);">
-            <span class="text-[11px] muted">Possible upside</span>
-            <span class="serif num-display text-[18px] font-semibold" style="color: var(--amber);">+$5–10k</span>
+            <span class="text-[12px] muted">Could add</span>
+            <span class="serif num-display text-[20px] font-semibold" style="color: var(--amber);">+$5–10,000</span>
           </div>
         </div>
       </div>
-      <div class="mt-5 flex items-center justify-between text-[12px]">
-        <span class="muted">Net: honest range stays <span class="text-white num-tabular">$836k–$858k</span>. But the asymmetry leans up.</span>
+      <div class="mt-5 flex items-center justify-between text-[13px]">
+        <span class="muted">Add it up: your house could quietly be worth <span class="text-white">$25,000–$30,000 more</span> than $847,200.</span>
         <a href="#ask" class="btn btn-secondary" style="padding: 8px 14px; font-size: 12px;">Ask Reed how to test these →</a>
       </div>
     </div>
@@ -1157,8 +1134,8 @@
         <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">List a little <em>under</em> what your home's worth. Sell for <em>more</em>.</div>
         <p class="text-[13px] muted leading-relaxed mb-5">In your zip, homes priced just under their value sold for <span class="text-white">4% over asking, in 9 days</span>. The ones that priced slightly above sat for <span class="text-white">47 days</span> and sold for 6% under. The under-pricers won. Every time.</p>
         <div class="panel-2 p-3 flex items-center justify-between">
-          <div class="text-[11px] muted">If you list at $865k instead of $895k</div>
-          <div class="text-[15px] font-semibold num-tabular" style="color: var(--emerald);">You'd net about $18k more</div>
+          <div class="text-[11px] muted">List at $865,000 instead of $895,000</div>
+          <div class="text-[15px] font-semibold num-tabular" style="color: var(--emerald);">+$18,000 in your pocket</div>
         </div>
       </div>
     </div>
@@ -1549,50 +1526,42 @@
     </div>
   </section>
 
-  <!-- ───────────────────────────── FOOTER — editorial sign-off ───────────────────────────── -->
-  <footer style="padding: 80px 0 64px; border-top: 1px solid var(--line); margin-top: 40px;">
+  <!-- ───────────────────────────── FOOTER ───────────────────────────── -->
+  <footer style="padding: 72px 0 48px; border-top: 1px solid var(--line); margin-top: 32px;">
     <div class="grid grid-cols-12 gap-12">
-      <div class="col-span-5">
-        <div class="flex items-center gap-3 mb-4">
+      <div class="col-span-6">
+        <div class="flex items-center gap-3 mb-5">
           <div style="width: 28px; height: 28px; border-radius: 999px; border: 1px solid var(--emerald-line); background: rgba(52,211,153,0.06); display: flex; align-items: center; justify-content: center;">
             <span class="serif" style="color: var(--emerald); font-size: 14px; font-weight: 600; line-height: 1; margin-top: -1px;">R</span>
           </div>
           <div class="leading-tight">
-            <div class="text-[13px] font-semibold" style="letter-spacing: -0.01em;">Reed</div>
-            <div class="text-[10px] muted-2 uppercase" style="letter-spacing: 0.18em;">By Roam</div>
+            <div class="text-[14px] font-semibold" style="letter-spacing: -0.01em;">Reed</div>
+            <div class="text-[11px] muted-2">A Roam product</div>
           </div>
         </div>
-        <div class="serif text-[15px] muted leading-relaxed max-w-[360px]">The home report written for the homeowner. Not for the agent trying to list them.</div>
+        <div class="serif text-[18px] muted leading-relaxed max-w-[420px]" style="color: var(--text-warm);">The home report written for the homeowner — not for the agent trying to list them.</div>
       </div>
       <div class="col-span-3">
-        <div class="text-[10px] muted-2 uppercase mb-3" style="letter-spacing: 0.18em;">This report</div>
-        <div class="space-y-1.5 text-[12px] muted">
-          <div>No. 047 · May 5, 2026</div>
+        <div class="text-[12px] font-medium mb-3" style="color: var(--text);">Your report</div>
+        <div class="space-y-2 text-[13px] muted">
           <div>For Jordan Blum</div>
-          <div class="num-tabular">1247 Highland View Dr</div>
+          <div>1247 Highland View Drive</div>
           <div>Atlanta, GA 30307</div>
+          <div>Updated May 5, 2026</div>
         </div>
       </div>
-      <div class="col-span-2">
-        <div class="text-[10px] muted-2 uppercase mb-3" style="letter-spacing: 0.18em;">Sources</div>
-        <div class="space-y-1.5 text-[12px] muted">
-          <div>Live MLS</div>
-          <div>4,200 nearby sales</div>
-          <div>Refreshed today</div>
-        </div>
-      </div>
-      <div class="col-span-2">
-        <div class="text-[10px] muted-2 uppercase mb-3" style="letter-spacing: 0.18em;">Promises</div>
-        <div class="space-y-1.5 text-[12px] muted">
-          <div>No agent calls</div>
-          <div>No data sold</div>
-          <div>No spam, ever</div>
+      <div class="col-span-3">
+        <div class="text-[12px] font-medium mb-3" style="color: var(--text);">Our promise</div>
+        <div class="space-y-2 text-[13px] muted">
+          <div>No agent will ever call you</div>
+          <div>We don't sell your information</div>
+          <div>We make money only when you sell</div>
         </div>
       </div>
     </div>
-    <div class="mt-12 pt-6 flex items-center justify-between" style="border-top: 1px solid var(--line);">
-      <div class="text-[10px] muted-3 uppercase" style="letter-spacing: 0.18em;">© Roam, Inc. · 2026</div>
-      <div class="text-[10px] muted-3 uppercase" style="letter-spacing: 0.18em;">withroam.com</div>
+    <div class="mt-10 pt-5 flex items-center justify-between text-[12px] muted-2" style="border-top: 1px solid var(--line);">
+      <div>© Roam, 2026</div>
+      <div>withroam.com</div>
     </div>
   </footer>
 
@@ -1766,26 +1735,26 @@
   const reconcileAgent = (n) => {
     const reedAvm = 847200;
     const delta = n - reedAvm;
-    const fmt = (x) => '$' + (Math.abs(x) >= 1000 ? (x/1000).toFixed(0) + 'k' : x.toLocaleString());
+    const fmt = (x) => '$' + Math.abs(x).toLocaleString();
     if (n < 820000) return {
       tone: 'rose',
-      title: 'They\'re sandbagging.',
-      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">' + fmt(delta) + '</span> below our $847k. Either they want to underprice for a fast sale (good for them, bad for you) or they\'re using stale comps. The four real recent sales near you support $865k–$885k. <span class="text-white">Push back.</span>'
+      title: 'They\'re sandbagging you.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">' + fmt(delta) + '</span> below our $847,200. Either they want to underprice it for a quick sale (good for them, bad for you), or they\'re using stale sales data. The four real recent sales near you say $865,000 to $885,000. <span class="text-white">Push back.</span>'
     };
     if (n <= 890000) return {
       tone: 'emerald',
-      title: 'They\'re in the right zone.',
-      body: '<span class="text-white">' + fmt(n) + '</span> sits inside our $865k–$885k recommended band (we estimate $847k as your honest mid-market value). This agent is being straight with you. Ask them: <span class="text-white">"What\'s your evidence for not going higher?"</span> If they have specific recent comps, trust them. If they hand-wave, push to $885k.'
+      title: 'They\'re being honest with you.',
+      body: '<span class="text-white">' + fmt(n) + '</span> sits inside our $865,000 to $885,000 range (we estimate $847,200 as the middle). This agent is shooting straight. Ask them: <span class="text-white">"What\'s the evidence for not going higher?"</span> If they have specific recent sales, trust them. If they hand-wave, push toward $885,000.'
     };
     if (n <= 920000) return {
       tone: 'amber',
-      title: 'Possible — with conditions.',
-      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--amber);">+' + fmt(delta) + '</span> above our $847k. To hit it, three things have to go right: (1) inventory has to stay flat (it\'s growing), (2) you need 1+ buyer over the $900k pricing wall (only 31 of 47 are pre-approved that high), (3) no price cuts — once you cut, you sit. Ask the agent: <span class="text-white">"What\'s your plan if we don\'t get an offer in 14 days?"</span>'
+      title: 'Possible — but everything has to go right.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--amber);">+' + fmt(delta) + '</span> above our $847,200. To hit it, three things all need to break your way: (1) no new homes come on the market near you, (2) you find one of the 31 buyers pre-approved above $900,000, (3) you don\'t take a single price cut. Ask the agent: <span class="text-white">"What\'s your plan if we don\'t get an offer in 14 days?"</span>'
     };
     return {
       tone: 'rose',
-      title: 'They\'re fishing for the listing.',
-      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">+' + fmt(delta) + '</span> above our $847k. This is a classic listing-presentation tactic: quote high, win the listing, push two price cuts in 60 days, blame "the market." 38% of homes priced above $900k in your zip had to cut. <span class="text-white">If you sign, you\'re likely sitting at $850k by August.</span>'
+      title: 'They\'re fishing for your listing.',
+      body: '<span class="text-white">' + fmt(n) + '</span> is <span class="num-tabular" style="color: var(--rose);">+' + fmt(delta) + '</span> above our $847,200. This is a classic agent tactic: quote high, win the listing, push two price cuts within 60 days, blame "the market." Almost 4 in 10 homes priced above $900,000 in your zip had to cut. <span class="text-white">If you sign with this agent, you\'re likely sitting at $850,000 by August.</span>'
     };
   };
   document.getElementById('agent-submit')?.addEventListener('click', () => {
