@@ -207,9 +207,6 @@
   .has-methodology { position: relative; cursor: help; border-bottom: 1px dotted var(--line-2); }
   .methodology-pop { position: absolute; bottom: calc(100% + 8px); left: 0; min-width: 280px; max-width: 360px; background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 10px; padding: 12px; font-size: 12px; color: var(--muted); line-height: 1.55; display: none; z-index: 40; box-shadow: 0 8px 24px rgba(0,0,0,0.5); text-align: left; font-weight: 400; }
   .has-methodology:hover .methodology-pop, .has-methodology:focus .methodology-pop { display: block; }
-  /* Stage bar */
-  .stage-pill { transition: all .15s ease; }
-  .stage-pill[data-active="true"] { background: var(--emerald); color: #0a0a0b; border-color: transparent; }
   /* Modal */
   .modal-backdrop { background: rgba(4,4,6,0.72); backdrop-filter: blur(6px); }
   /* Slider */
@@ -1565,35 +1562,6 @@
     }
   });
 
-  /* ───────── Stage selector — adapts hero, sell-window heading, and modal aggression ───────── */
-  const heroSub = document.getElementById('hero-subtitle');
-  const heroCta2 = document.getElementById('hero-cta-secondary');
-  const swTitle = document.getElementById('sell-window-title');
-  const swEyebrow = document.getElementById('sell-window-eyebrow');
-  const stageCopy = {
-    curious:     { sub: 'This house has been quietly working for you — <span class="text-white font-medium">$2,010 a month</span> in equity, every month, for nothing. Below: where that came from. No pressure to do anything about it.', cta: 'What is my house earning?', swEyebrow: 'If you ever did decide to sell', swTitle: 'Here\'s what selling would look like — when you\'re ready.' },
-    watching:    { sub: 'Right now: <span class="text-white font-medium">$847,200</span>, up <span class="text-white font-medium">$3,400</span> this week. Three things in the next 90 days could move it. We watch them so you don\'t have to.', cta: 'What could change my number?', swEyebrow: 'Your sell window, when you\'re ready', swTitle: 'When the time comes, here\'s what the math says.' },
-    considering: { sub: 'You\'re thinking 6–12 months out. Two things matter most: where prices go from here, and what you should fix vs not fix. Below: both, with numbers.', cta: 'When should I plan to list?', swEyebrow: 'Your sell window — 6 to 12 months out', swTitle: 'List by fall and you net more than waiting until spring. Here\'s why.' },
-    selling90:   { sub: 'If you list by late May, you walk away with about <span class="text-white font-medium">$818,000</span> in your pocket. Wait until July and that\'s roughly $17,000 less. Below: the four sales that set the number, and what to do this week.', cta: 'Should I sell now?', swEyebrow: 'Should you sell now?', swTitle: 'Atlanta\'s spring window is the strongest of the year — listing by late May vs. fall is worth about $17,000–$29,000.' },
-    shopping:    { sub: 'You\'ve seen Zillow\'s number. You\'ve heard two agents\' numbers. Here\'s the one based on the four homes that actually sold near yours — with the math next to every claim.', cta: 'Compare to Zillow\'s estimate', swEyebrow: 'Your sell window vs what an agent will tell you', swTitle: 'List in the next 3 weeks. Higher numbers from agents come with conditions.' }
-  };
-  let currentStage = 'selling90';
-  const applyStage = (stage) => {
-    currentStage = stage;
-    document.querySelectorAll('.stage-pill').forEach(b => b.removeAttribute('data-active'));
-    document.querySelector(`.stage-pill[data-stage="${stage}"]`)?.setAttribute('data-active', 'true');
-    try { localStorage.setItem('reed-stage', stage); } catch(e) {}
-    const copy = stageCopy[stage]; if (!copy) return;
-    if (heroSub) heroSub.innerHTML = copy.sub;
-    if (heroCta2) heroCta2.textContent = copy.cta;
-    if (swTitle) swTitle.textContent = copy.swTitle;
-    if (swEyebrow) swEyebrow.textContent = copy.swEyebrow;
-  };
-  document.querySelectorAll('.stage-pill').forEach(btn => btn.addEventListener('click', () => applyStage(btn.dataset.stage)));
-  try {
-    const saved = localStorage.getItem('reed-stage');
-    if (saved && stageCopy[saved]) applyStage(saved);
-  } catch(e) {}
 
   /* ───────── Save modal ───────── */
   const modal = document.getElementById('save-modal');
