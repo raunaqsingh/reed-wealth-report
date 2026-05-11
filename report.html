@@ -343,8 +343,8 @@
             </div>
             <div style="background: var(--panel); padding: 18px;">
               <div class="text-[12px] muted mb-2">What you own outright</div>
-              <div class="num-display text-[20px] font-semibold">$391,800</div>
-              <div class="text-[11px] muted-2 mt-1">Mortgage left $455,000</div>
+              <div class="num-display text-[20px] font-semibold" id="hero-equity">$392,200</div>
+              <div class="text-[11px] muted-2 mt-1" id="hero-loan-note">Mortgage left $455,000</div>
             </div>
             <div style="background: var(--panel); padding: 18px;">
               <div class="text-[12px] muted mb-2">How fast homes sell here</div>
@@ -352,6 +352,59 @@
               <div class="text-[11px] muted-2 mt-1">Down from 31</div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── TRUST BAND (a real section, right under the hero) ───────────── -->
+  <section style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0;">
+    <div class="flex items-start gap-4" style="max-width: 840px; margin: 0 auto;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color: var(--emerald); flex-shrink: 0; margin-top: 3px;"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="serif" style="font-size: 19px; letter-spacing: -0.015em; margin-bottom: 7px;">Before you read on — how we make money, and how we don't.</div>
+        <div class="text-[14px] muted leading-relaxed">This report is free, forever. No agent will call you. We don't sell your information. We earn money one way only — a flat listing fee, about 1% of the sale price, and only if you choose us to sell your home. If you never list with us, we never make a dollar from you. And when the right move is to wait — which it usually is — that's what we tell you.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── THE SHORT VERSION (TL;DR + make-it-yours mini-form) ───────────── -->
+  <section>
+    <div class="text-[12px] uppercase muted mb-4" style="letter-spacing: 0.08em;">The short version</div>
+    <div class="panel ring-soft" style="padding: 0; overflow: hidden;">
+      <div class="grid grid-cols-5" style="gap: 1px; background: var(--line);">
+        <div style="background: var(--panel); padding: 20px 22px;">
+          <div class="text-[12px] muted mb-2">Your house is worth</div>
+          <div class="num-tabular" style="font-size: 22px; font-weight: 600; color: var(--text-warm);">$847,200</div>
+          <div class="text-[11px] muted-2 mt-1.5">$836k–$858k range</div>
+        </div>
+        <div style="background: var(--panel); padding: 20px 22px;">
+          <div class="text-[12px] muted mb-2">Best time to list</div>
+          <div style="font-size: 22px; font-weight: 600; color: var(--text-warm);">Late May</div>
+          <div class="text-[11px] muted-2 mt-1.5">Spring window is strongest</div>
+        </div>
+        <div style="background: var(--panel); padding: 20px 22px;">
+          <div class="text-[12px] muted mb-2">List it at</div>
+          <div class="num-tabular" style="font-size: 22px; font-weight: 600; color: var(--text-warm);">$865k–$885k</div>
+          <div class="text-[11px] muted-2 mt-1.5">8 in 10 here got an offer week one</div>
+        </div>
+        <div style="background: var(--panel); padding: 20px 22px;">
+          <div class="text-[12px] muted mb-2">Cash after your mortgage</div>
+          <div class="num-tabular" id="tldr-cash" style="font-size: 22px; font-weight: 600; color: var(--emerald);">~$363,000</div>
+          <div class="text-[11px] muted-2 mt-1.5" id="tldr-cash-note">after fees + paying off $455k</div>
+        </div>
+        <div style="background: var(--panel); padding: 20px 22px;">
+          <div class="text-[12px] muted mb-2">Fix first</div>
+          <div style="font-size: 16px; font-weight: 600; color: var(--text-warm); line-height: 1.3;">Refinish the floors</div>
+          <div class="text-[11px] muted-2 mt-1.5">Skip the bathroom remodel</div>
+        </div>
+      </div>
+      <div style="background: var(--bg-elevated); border-top: 1px solid var(--line); padding: 14px 22px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+        <span class="text-[13px] muted">These assume a <span class="text-white">$455,000</span> mortgage. Yours different? Tell us and Reed re-runs it:</span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="text-[13px] muted-2">Mortgage left&nbsp;$</span>
+          <input id="mini-loan" type="text" value="455,000" inputmode="numeric" class="num-tabular" style="width: 90px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 6px; padding: 6px 9px; font-size: 13px; color: var(--text); outline: none;" />
+          <button id="mini-recalc" class="btn btn-secondary" style="padding: 7px 13px; font-size: 12px;">Re-run</button>
         </div>
       </div>
     </div>
@@ -732,8 +785,8 @@
         <div class="panel-2 p-4">
           <div class="chip chip-emerald mb-2">Recommended</div>
           <div class="text-[12px] muted">List by <span class="text-white">May 31</span></div>
-          <div class="text-[22px] font-semibold num-tabular mt-1 has-methodology" tabindex="0">$818k<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">From $875k list to $818k in your pocket</span>Likely sale price $875k · agent fee −$26.3k · closing costs −$8.7k · mortgage payoff −$22.0k · net to you <span class="text-white">$818k</span>.<br><br><a href="#counter-offer" style="color: var(--emerald);">Run with your numbers →</a></span></div>
-          <div class="text-[11px] muted-2">in your pocket · sells in ~14 days</div>
+          <div class="text-[22px] font-semibold num-tabular mt-1 has-methodology" tabindex="0">$818k<span class="methodology-pop"><span class="text-white block mb-1 text-[12px] font-semibold">$847,200 sale value → $818,000 from the sale</span>$847,200 − ~$26,000 agent fee − ~$3,000 closing/transfer = <span class="text-white">$818,000</span> net from the sale. Pay off your $455,000 mortgage and you walk away with about $363,000 in cash.<br><br><a href="#sell-window" style="color: var(--emerald);">Drag the slider below to run other prices →</a></span></div>
+          <div class="text-[11px] muted-2">from the sale · sells in ~14 days</div>
         </div>
         <div class="panel-2 p-4">
           <div class="chip chip-neutral mb-2">Wait until July</div>
@@ -784,6 +837,38 @@
         <button onclick="document.getElementById('save-report-nav').click()" class="w-full py-2 rounded-lg text-[12px] font-medium border hairline-2 hover:bg-[#1a1a20] transition muted">
           Not selling yet — just email me when this changes
         </button>
+      </div>
+    </div>
+
+    <!-- Live list-price slider -->
+    <div class="col-span-12 panel ring-soft" style="padding: 24px 28px;">
+      <div class="flex items-baseline justify-between mb-5 flex-wrap gap-3">
+        <div>
+          <div class="text-[15px] font-medium">What if you listed at a different price? Drag it.</div>
+          <div class="text-[12px] muted">Built on your <span id="slider-mortgage-note">$455,000</span> mortgage — change it in the box above and this updates too.</div>
+        </div>
+        <div class="text-right">
+          <div class="text-[11px] muted">If you list at</div>
+          <div id="lp-out" class="num-tabular" style="font-size: 30px; font-weight: 600; color: var(--text-warm); line-height: 1;">$875,000</div>
+        </div>
+      </div>
+      <input id="lp-slider" type="range" min="820000" max="950000" step="5000" value="875000" style="width: 100%; accent-color: #34d399;" />
+      <div class="flex justify-between text-[11px] muted-2 mt-2">
+        <span>$820k — priced to move</span><span>$865k–$885k — the sweet spot</span><span>$950k — a stretch</span>
+      </div>
+      <div class="grid grid-cols-3 gap-6 mt-6 pt-5 border-t hairline">
+        <div>
+          <div class="text-[12px] muted mb-1.5">Likely take-home after fees</div>
+          <div id="lp-net" class="num-tabular" style="font-size: 24px; font-weight: 600; color: var(--text-warm);">~$835,000</div>
+        </div>
+        <div>
+          <div class="text-[12px] muted mb-1.5">Cash after your mortgage</div>
+          <div id="lp-cash" class="num-tabular" style="font-size: 24px; font-weight: 600; color: var(--emerald);">~$380,000</div>
+        </div>
+        <div>
+          <div class="text-[12px] muted mb-1.5">What tends to happen at this price</div>
+          <div id="lp-verdict" class="text-[13px]" style="line-height: 1.45;">The realistic top — expect 1–2 offers in the first week or two.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1014,16 +1099,15 @@
       </div>
     </div>
 
-    <!-- Card 4 -->
+    <!-- Card 4 — an honest negative, because a report where every insight is good news reads like marketing -->
     <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(251,191,36,0.10), transparent); transform: translate(40%, -40%);"></div>
       <div class="relative">
-        <div class="chip chip-amber mb-4">The neighbor effect</div>
-        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Your overpriced neighbor is helping you.</div>
-        <p class="text-[13px] muted leading-relaxed mb-5">The house at 1305 Highland is overpriced and sitting (41 days, 2 cuts). Sounds bad — but it <span class="text-white">helps you</span>. Buyers see that house, then yours, and yours looks like the deal of the block.</p>
+        <div class="chip chip-neutral mb-4">The honest downside</div>
+        <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Two things buyers will use against you at the table.</div>
+        <p class="text-[13px] muted leading-relaxed mb-5">Your home faces north, so the front rooms get afternoon glare — buyers notice. And there's no second-floor laundry. Neither is a dealbreaker, but expect both to come up in negotiations. Get ahead of them: blackout shades staged in, and a line in the listing about the main-floor laundry room.</p>
         <div class="panel-2 p-3 flex items-center justify-between">
-          <div class="text-[11px] muted">What it adds to your sale</div>
-          <div class="text-[15px] font-semibold num-tabular" style="color: var(--emerald);">+$6,000–9,000</div>
+          <div class="text-[11px] muted">Roughly what they cost you</div>
+          <div class="text-[15px] font-semibold num-tabular" style="color: var(--rose);">−$8,000 combined</div>
         </div>
       </div>
     </div>
@@ -1312,16 +1396,29 @@
         </svg>
       </div>
 
-      <div class="mt-5 pt-5 border-t hairline flex items-center justify-between gap-4">
+      <div class="mt-7 pt-6 border-t hairline">
+        <div class="text-[12px] muted mb-3">Here's what one of those emails actually looks like:</div>
+        <div class="panel-2" style="padding: 0; overflow: hidden; max-width: 560px;">
+          <div style="border-bottom: 1px solid var(--line); padding: 11px 16px; display: flex; align-items: baseline; gap: 8px;">
+            <span class="text-[11px] muted-2">From</span><span class="text-[12px]" style="color: var(--text);">Reed</span>
+            <span class="text-[11px] muted-2" style="margin-left: auto;">Mon, May 12 · 7:02 a.m.</span>
+          </div>
+          <div style="padding: 16px;">
+            <div class="text-[14px] font-semibold mb-2">Your home, May 12 — up $1,400</div>
+            <div class="text-[13px] muted leading-relaxed">457 Sinclair (3 blocks over, same floor plan) just closed at <span class="text-white num-tabular">$905,000</span> — $15k over asking, sold in 8 days. That nudges your estimate to <span class="text-white num-tabular">$847,200</span>. Nothing for you to do — just keeping you posted. <span class="muted-2">Reply with a question anytime.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-5 border-t hairline flex items-center justify-between gap-4">
         <div class="text-[12px] muted">Get next Monday's update by email — or skip it. You decide.</div>
-        <button onclick="document.getElementById('save-report-nav').click()" class="px-4 py-2 rounded-lg text-[13px] font-semibold" style="background: var(--emerald); color: #0a0a0b;">Watch my home for me →</button>
+        <button onclick="document.getElementById('save-report-nav').click()" class="px-4 py-2 rounded-lg text-[13px] font-semibold" style="background: var(--emerald); color: #08080a;">Watch my home for me →</button>
       </div>
     </div>
   </section>
 
   <!-- ───────────────────────────── SECTION: ASK REED ───────────────────────────── -->
   <section id="ask" class="panel p-10 ring-soft relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(700px 320px at 80% 50%, rgba(52,211,153,0.10), transparent 70%);"></div>
     <div class="relative grid grid-cols-12 gap-10 items-center">
       <div class="col-span-7">
         <div class="text-[12px] muted uppercase tracking-wider mb-2">Ask anything about your home</div>
@@ -1365,6 +1462,35 @@
             <button class="chip chip-neutral hover:bg-[#22222a] transition">Email this to me</button>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────── SECTION: QUESTIONS TO ASK ANY AGENT ───────────────────────────── -->
+  <section>
+    <div class="text-[12px] uppercase muted mb-3" style="letter-spacing: 0.08em;">Before you pick anyone — including us</div>
+    <h2 class="serif text-[34px] font-semibold tracking-tight mb-2" style="letter-spacing: -0.02em;">Five questions to ask any agent you talk to.</h2>
+    <div class="text-[14px] muted mb-7" style="max-width: 640px;">We're on your side, which means arming you to evaluate everyone — Reed included. If an agent can answer these clearly, that's a good sign. If they get vague, that's a flag.</div>
+    <div class="grid grid-cols-1" style="border-top: 1px solid var(--line);">
+      <div class="flex items-start gap-4 py-5" style="border-bottom: 1px solid var(--line);">
+        <span class="num-tabular text-[14px] muted-2" style="width: 24px; flex-shrink: 0; padding-top: 1px;">1</span>
+        <div><div class="text-[15px] font-medium mb-1">"What recent sales support the price you're quoting me?"</div><div class="text-[13px] muted">They should name specific homes that closed nearby in the last 60–90 days — not "the market feels strong."</div></div>
+      </div>
+      <div class="flex items-start gap-4 py-5" style="border-bottom: 1px solid var(--line);">
+        <span class="num-tabular text-[14px] muted-2" style="width: 24px; flex-shrink: 0; padding-top: 1px;">2</span>
+        <div><div class="text-[15px] font-medium mb-1">"What's your plan if there's no offer in 14 days?"</div><div class="text-[13px] muted">A real answer means they've thought about it. "We'll see how it goes" means a price cut is already baked in.</div></div>
+      </div>
+      <div class="flex items-start gap-4 py-5" style="border-bottom: 1px solid var(--line);">
+        <span class="num-tabular text-[14px] muted-2" style="width: 24px; flex-shrink: 0; padding-top: 1px;">3</span>
+        <div><div class="text-[15px] font-medium mb-1">"What's your fee — all in, including anything I pay the buyer's agent?"</div><div class="text-[13px] muted">You want one number you can plug into your net-proceeds math, not "it's negotiable."</div></div>
+      </div>
+      <div class="flex items-start gap-4 py-5" style="border-bottom: 1px solid var(--line);">
+        <span class="num-tabular text-[14px] muted-2" style="width: 24px; flex-shrink: 0; padding-top: 1px;">4</span>
+        <div><div class="text-[15px] font-medium mb-1">"What will you actually spend marketing my home?"</div><div class="text-[13px] muted">Photos, staging, online placement — and a dollar figure. "We have great marketing" is not a number.</div></div>
+      </div>
+      <div class="flex items-start gap-4 py-5" style="border-bottom: 1px solid var(--line);">
+        <span class="num-tabular text-[14px] muted-2" style="width: 24px; flex-shrink: 0; padding-top: 1px;">5</span>
+        <div><div class="text-[15px] font-medium mb-1">"Who shows my home — you, or someone junior?"</div><div class="text-[13px] muted">Plenty of busy agents hand off showings. Fine if you know it; not fine if you find out later.</div></div>
       </div>
     </div>
   </section>
@@ -1490,6 +1616,54 @@
     setTimeout(closeModal, 1800);
   });
   // No auto-popping modal — it contradicts the "no spam" promise. Save is button-driven only.
+
+  /* ───────── Make-it-yours: recompute equity + cash from the homeowner's mortgage ───────── */
+  const HOME_VALUE = 847200;
+  const NET_SALE_PROCEEDS = 818000; // sale value minus agent fee + closing costs
+  const fmtDollar = (n) => '$' + Math.round(n).toLocaleString();
+  const recalcFromLoan = (loanRaw) => {
+    let loan = parseFloat(String(loanRaw).replace(/[^0-9.]/g, ''));
+    if (!isFinite(loan)) return;
+    if (loan < 5000) loan = loan * 1000; // accept "455" → 455000
+    const equity = HOME_VALUE - loan;
+    const cash = NET_SALE_PROCEEDS - loan;
+    const eq = document.getElementById('hero-equity'); if (eq) eq.textContent = fmtDollar(equity);
+    const eqNote = document.getElementById('hero-loan-note'); if (eqNote) eqNote.textContent = 'Mortgage left ' + fmtDollar(loan);
+    const c = document.getElementById('tldr-cash'); if (c) c.textContent = '~' + fmtDollar(cash);
+    const cNote = document.getElementById('tldr-cash-note'); if (cNote) cNote.textContent = 'after fees + paying off ' + fmtDollar(loan);
+    const sliderNote = document.getElementById('slider-mortgage-note'); if (sliderNote) sliderNote.textContent = fmtDollar(loan);
+  };
+  document.getElementById('mini-recalc')?.addEventListener('click', () => recalcFromLoan(document.getElementById('mini-loan')?.value));
+  document.getElementById('mini-loan')?.addEventListener('keydown', (e) => { if (e.key === 'Enter') recalcFromLoan(e.target.value); });
+
+  /* ───────── Sell-window list-price slider ───────── */
+  const lpSlider = document.getElementById('lp-slider');
+  if (lpSlider) {
+    const lpOut    = document.getElementById('lp-out');
+    const lpNet    = document.getElementById('lp-net');
+    const lpCash   = document.getElementById('lp-cash');
+    const lpVerdict= document.getElementById('lp-verdict');
+    const update = () => {
+      const list = parseInt(lpSlider.value, 10);
+      // Directional model: priced in the sweet spot ($855–890k) tends to sell at-or-above list; above that, the gap widens.
+      let likelySale;
+      if (list <= 870000)      likelySale = list * 1.035;     // priced to move → over ask
+      else if (list <= 890000) likelySale = list * 1.005;     // realistic top → roughly at ask
+      else if (list <= 910000) likelySale = list * 0.97;      // a stretch → under ask, slower
+      else                     likelySale = list * 0.93;      // too high → sits, then cuts
+      const net  = likelySale * 0.96 - 8700;                  // ~3% agent + ~$8.7k closing
+      const loan = (() => { let l = parseFloat(String(document.getElementById('mini-loan')?.value || '455000').replace(/[^0-9.]/g,'')); if (!isFinite(l)) l = 455000; if (l < 5000) l *= 1000; return l; })();
+      lpOut.textContent  = fmtDollar(list);
+      lpNet.textContent  = '~' + fmtDollar(net);
+      lpCash.textContent = '~' + fmtDollar(net - loan);
+      if (list <= 870000)      lpVerdict.innerHTML = '<span style="color:var(--emerald)">Priced to move.</span> Likely sells fast, often a little over asking.';
+      else if (list <= 890000) lpVerdict.innerHTML = '<span style="color:var(--emerald)">The realistic top.</span> Expect 1–2 offers in the first week or two.';
+      else if (list <= 910000) lpVerdict.innerHTML = '<span style="color:var(--amber)">A stretch.</span> Fewer buyers qualify here — slower, and you may end up below this number.';
+      else                     lpVerdict.innerHTML = '<span style="color:var(--rose)">Too high.</span> Most homes priced here sat, then cut — and sold for less than if they\'d priced honestly.';
+    };
+    lpSlider.addEventListener('input', update);
+    update();
+  }
 
   /* ───────── Ask Reed — interactive chip responses ───────── */
   const responses = {
