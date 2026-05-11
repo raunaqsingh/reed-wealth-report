@@ -99,6 +99,15 @@
     transition: border-color .15s ease;
   }
   .addr-box:focus-within { border-color: var(--emerald-line); }
+  /* Walkthrough option buttons */
+  .wiz-opt {
+    width: 100%; text-align: left; padding: 12px 14px; border-radius: 9px;
+    border: 1px solid var(--line-2); background: var(--panel); color: var(--text);
+    font-size: 14px; cursor: pointer; transition: all .12s ease; line-height: 1.35;
+  }
+  .wiz-opt:hover { border-color: var(--line-3); background: var(--panel-2); }
+  .wiz-opt.on { border-color: var(--emerald-line); background: rgba(52,211,153,0.08); color: var(--text-warm); font-weight: 500; }
+  .wiz-opt:focus { outline: none; }
   a { color: inherit; }
   ::-webkit-scrollbar { width: 10px; }
   ::-webkit-scrollbar-thumb { background: #1f1f25; border-radius: 999px; }
@@ -125,32 +134,91 @@
 
 <main>
 
-  <!-- ───────────── HERO — an obvious lead magnet ───────────── -->
+  <!-- ───────────── HERO — address → walkthrough → estimate ───────────── -->
   <section style="position: relative; overflow: hidden;">
     <div style="position: absolute; top: -280px; right: -160px; width: 720px; height: 720px; background: radial-gradient(closest-side, rgba(52,211,153,0.045), transparent 72%); pointer-events: none;"></div>
-    <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 96px; max-width: 880px; text-align: center;">
-      <div class="chip chip-neutral" style="margin-bottom: 28px; display: inline-flex;">Free home report · Atlanta · updated this week</div>
-      <h1 class="serif-display" style="font-size: 76px; line-height: 1.0; margin: 0 0 24px; letter-spacing: -0.042em;">
-        What's your home worth —<br>and should you sell it now?
-      </h1>
-      <p style="font-size: 19px; max-width: 560px; margin: 0 auto 36px; color: var(--text); line-height: 1.6; font-weight: 450;">
-        Enter your address. In 60 seconds, Reed shows you your number — with an honest range, not a Zestimate guess — the four sales nearby that set it, and a straight answer on whether to list now or wait.
-      </p>
+    <div class="wrap" style="position: relative; padding-top: 96px; padding-bottom: 88px; max-width: 940px;">
 
-      <div id="start" style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
-        <form id="addr-form" class="addr-box" style="margin: 0 auto; max-width: 560px; width: 100%;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color: var(--muted-2); margin-left: 10px; flex-shrink: 0;"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
-          <input class="addr-input num" type="text" placeholder="Enter your home address" autocomplete="street-address" />
-          <button type="submit" class="btn btn-primary" style="white-space: nowrap; padding: 14px 22px; font-size: 15px;">Get my report <span style="opacity:.7; margin-left:5px;">→</span></button>
-        </form>
-        <div style="font-size: 13px; color: var(--muted-2);">
-          Free · no agent will ever call you · we don't sell your info · <a href="report.html" style="color: var(--muted); text-decoration: underline; text-underline-offset: 2px;">see a full sample report</a>
+      <!-- INITIAL STATE -->
+      <div id="hero-initial" style="text-align: center;">
+        <div class="chip chip-neutral" style="margin-bottom: 28px; display: inline-flex;">Free home report · Atlanta · updated this week</div>
+        <h1 class="serif-display" style="font-size: 74px; line-height: 1.0; margin: 0 0 24px; letter-spacing: -0.042em;">
+          What's your home worth —<br>and should you sell it now?
+        </h1>
+        <p style="font-size: 19px; max-width: 600px; margin: 0 auto 36px; color: var(--text); line-height: 1.6; font-weight: 450;">
+          Enter your address. We'll pull the four sales nearby for a starting estimate — then ask a few quick questions about the inside (the part the comps can't see) and narrow it to within a couple thousand dollars. Tighter than any Zestimate.
+        </p>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+          <form id="addr-form" class="addr-box" style="margin: 0 auto; max-width: 560px; width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color: var(--muted-2); margin-left: 10px; flex-shrink: 0;"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+            <input class="addr-input num" type="text" placeholder="Enter your home address" autocomplete="street-address" />
+            <button type="submit" class="btn btn-primary" style="white-space: nowrap; padding: 14px 22px; font-size: 15px;">Get my estimate <span style="opacity:.7; margin-left:5px;">→</span></button>
+          </form>
+          <div style="font-size: 13px; color: var(--muted-2);">
+            Free · no agent will ever call you · we don't sell your info · <a href="report.html" style="color: var(--muted); text-decoration: underline; text-underline-offset: 2px;">see a full sample report</a>
+          </div>
+        </div>
+        <div style="margin-top: 40px; font-size: 14px; color: var(--muted);">
+          Atlanta home values are up <span style="color: var(--text); font-weight: 600;">5.2%</span> this year. But the metro number isn't yours — your block, your school zone, and your home's condition are all moving differently. <span style="color: var(--text);">That's what we narrow in on.</span>
         </div>
       </div>
 
-      <div style="margin-top: 40px; font-size: 14px; color: var(--muted);">
-        Atlanta home values are up <span style="color: var(--text); font-weight: 600;">5.2%</span> this year. But the metro number isn't yours — your block, your school zone, and your home's features are all moving differently. <span style="color: var(--text);">That's what your report shows.</span>
+      <!-- WALKTHROUGH WIZARD (revealed when an address is submitted) -->
+      <div id="hero-wizard" style="display: none;">
+        <div class="panel panel-elev" style="padding: 0; overflow: hidden; text-align: left;">
+          <div id="wiz-header" style="padding: 18px 28px; border-bottom: 1px solid var(--line); background: var(--bg-elevated); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+            <div>
+              <div style="font-size: 12px; color: var(--muted);">Narrowing in on the value of</div>
+              <div id="wiz-addr" style="font-size: 15px; font-weight: 600; color: var(--text-warm);">1247 Highland View Drive, Atlanta GA</div>
+            </div>
+            <div style="text-align: right;">
+              <div id="wiz-step-label" style="font-size: 11px; color: var(--muted-2); margin-bottom: 6px;">Question 1 of 5</div>
+              <div style="width: 150px; height: 4px; border-radius: 999px; background: var(--panel-2); overflow: hidden;"><div id="wiz-progress" style="height: 100%; background: var(--emerald); width: 0%; transition: width .3s ease;"></div></div>
+            </div>
+          </div>
+
+          <div id="wiz-body" style="display: grid; grid-template-columns: 1.2fr 1fr;">
+            <div id="wiz-question-pane" style="padding: 28px 30px 32px; border-right: 1px solid var(--line);">
+              <div id="wiz-q" class="serif" style="font-size: 23px; letter-spacing: -0.015em; margin-bottom: 6px; line-height: 1.2;"></div>
+              <div id="wiz-q-sub" style="font-size: 13px; color: var(--muted); margin-bottom: 18px; line-height: 1.5;"></div>
+              <div id="wiz-options" style="display: flex; flex-direction: column; gap: 8px;"></div>
+              <button id="wiz-next" class="btn btn-primary" style="display: none; margin-top: 16px;">Next →</button>
+            </div>
+
+            <div style="padding: 28px 30px;">
+              <div style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">Your estimate so far</div>
+              <div id="wiz-mid" class="num-tabular" style="font-size: 34px; font-weight: 700; color: var(--text-warm); line-height: 1;">$850,000</div>
+              <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">Range: <span id="wiz-range" class="num-tabular" style="color: var(--text); font-weight: 600;">$820,000 – $880,000</span></div>
+              <div style="margin-top: 18px; position: relative; height: 24px;">
+                <div style="position: absolute; top: 10px; left: 0; right: 0; height: 4px; border-radius: 999px; background: var(--panel-2);"></div>
+                <div id="wiz-band" style="position: absolute; top: 8px; left: 7%; width: 86%; height: 8px; border-radius: 999px; background: rgba(52,211,153,0.28); transition: left .45s ease, width .45s ease;"></div>
+                <div id="wiz-marker" style="position: absolute; top: 5px; left: 50%; width: 3px; height: 14px; border-radius: 2px; background: var(--emerald); transform: translateX(-50%); transition: left .45s ease;"></div>
+              </div>
+              <div id="wiz-note" style="font-size: 11px; color: var(--muted-2); margin-top: 12px; line-height: 1.5;">A Zestimate gives you a $50k+ swing. We'll get this to within a couple thousand.</div>
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line);">
+                <div style="font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Based on 4 recent sales nearby</div>
+                <div style="font-size: 12px; color: var(--muted); line-height: 1.7;">
+                  1183 Highland — <span class="num-tabular" style="color: var(--text);">$891,000</span> · 6 days<br>
+                  457 Sinclair — <span class="num-tabular" style="color: var(--text);">$905,000</span> · 8 days<br>
+                  998 Euclid — <span class="num-tabular" style="color: var(--text);">$815,000</span> · 22 days<br>
+                  1305 Highland — <span class="num-tabular" style="color: var(--text);">$762,000</span> · 41 days
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="wiz-final" style="display: none; padding: 40px 28px 36px; text-align: center; border-top: 1px solid var(--line); background: var(--bg-elevated);">
+            <div style="font-size: 13px; color: var(--muted); margin-bottom: 8px;">Based on what you told us, your home is worth about</div>
+            <div id="wiz-final-mid" class="serif num-tabular" style="font-size: 56px; line-height: 1; color: var(--text-warm); margin-bottom: 10px; font-weight: 650;">$848,000</div>
+            <div style="font-size: 14px; color: var(--text); max-width: 500px; margin: 0 auto;">Tight range: <span id="wiz-final-range" class="num-tabular" style="color: var(--text-warm); font-weight: 600;">$844,000 – $852,000</span>. That's an $8k spread — vs the $50k+ a Zestimate would hand you.</div>
+            <div style="margin-top: 24px;">
+              <a href="report.html" class="btn btn-primary" style="padding: 14px 24px; font-size: 15px;">See your full report — the comps, when to sell, what to fix <span style="opacity:.7; margin-left:5px;">→</span></a>
+            </div>
+            <div style="font-size: 12px; color: var(--muted-2); margin-top: 12px;">Free · no agent will call you · we don't sell your info</div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -377,14 +445,165 @@
 </main>
 
 <script>
-  // Address form → for now, route to the sample report. (Wire to real report generation later.)
-  document.getElementById('addr-form')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const v = this.querySelector('input').value.trim();
-    // In production: POST address → generate report → redirect to /report/{slug}
-    // For the prototype, take them to the example report.
-    window.location.href = 'report.html' + (v ? ('#addr=' + encodeURIComponent(v)) : '');
-  });
+  /* ───────── Landing walkthrough: address → 5 quick questions → narrowed estimate ───────── */
+  (function () {
+    const initial = document.getElementById('hero-initial');
+    const wizard  = document.getElementById('hero-wizard');
+    const form    = document.getElementById('addr-form');
+    if (!form || !wizard || !initial) return;
+    const el = (id) => document.getElementById(id);
+    const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+    const fmtK = (n) => '$' + Math.round(n / 1000).toLocaleString() + ',000';
+
+    const QUESTIONS = [
+      { q: "When was the kitchen last updated?",
+        sub: "The single biggest thing the comps can't see — it moves the number more than anything else.",
+        multi: false, newSpread: 24000,
+        options: [
+          { label: "Original — never really updated",        delta: -10000 },
+          { label: "Updated 10–20 years ago",                delta: -3000  },
+          { label: "Refreshed in the last 5–10 years",       delta: 4000   },
+          { label: "Fully renovated in the last 5 years",    delta: 16000  },
+        ] },
+      { q: "And the bathrooms?",
+        sub: "Buyers notice — even a light refresh shows up in the offer.",
+        multi: false, newSpread: 18000,
+        options: [
+          { label: "Original",            delta: -7000 },
+          { label: "Updated a while ago", delta: -1000 },
+          { label: "Renovated recently",  delta: 8000  },
+        ] },
+      { q: "Anything major replaced in the last few years?",
+        sub: "Pick all that apply — buyers pay for not having to do these themselves.",
+        multi: true, newSpread: 14000,
+        options: [
+          { label: "Roof",           delta: 4000 },
+          { label: "HVAC / furnace", delta: 3000 },
+          { label: "Windows",        delta: 3000 },
+          { label: "Water heater",   delta: 1000 },
+          { label: "None of these",  delta: 0, clears: true },
+        ] },
+      { q: "How would a buyer describe the inside today?",
+        sub: "Be honest — this is the question that closes the gap the most.",
+        multi: false, newSpread: 8000,
+        options: [
+          { label: "Needs work — dated, some deferred maintenance", delta: -22000 },
+          { label: "Average — clean and lived-in",                  delta: 0      },
+          { label: "Move-in ready — nothing to do",                 delta: 11000  },
+          { label: "Showplace — could be in a magazine",            delta: 22000  },
+        ] },
+      { q: "Anything that makes your home stand out?",
+        sub: "Pick all that apply.",
+        multi: true, newSpread: 4000,
+        options: [
+          { label: "Finished basement",               delta: 13000 },
+          { label: "Quarter-acre lot or bigger",      delta: 7000  },
+          { label: "Real view or privacy",            delta: 6000  },
+          { label: "Recent addition / extra bedroom", delta: 17000 },
+          { label: "ADU or in-law suite",             delta: 11000 },
+          { label: "None of those",                   delta: 0, clears: true },
+        ] },
+    ];
+
+    const BASE_MID = 850000, BASE_SPREAD = 30000;
+    const WIN_LO = 780000, WIN_HI = 920000;
+    let mid = BASE_MID, spread = BASE_SPREAD, step = 0;
+    const picks = {};
+
+    const setBar = () => {
+      const lo = clamp(mid - spread, WIN_LO, WIN_HI);
+      const hi = clamp(mid + spread, WIN_LO, WIN_HI);
+      const m  = clamp(mid, WIN_LO, WIN_HI);
+      const span = WIN_HI - WIN_LO;
+      el('wiz-band').style.left  = ((lo - WIN_LO) / span * 100) + '%';
+      el('wiz-band').style.width = ((hi - lo) / span * 100) + '%';
+      el('wiz-marker').style.left = ((m - WIN_LO) / span * 100) + '%';
+      el('wiz-mid').textContent = fmtK(mid);
+      el('wiz-range').textContent = fmtK(mid - spread) + ' – ' + fmtK(mid + spread);
+    };
+
+    const render = () => {
+      const Q = QUESTIONS[step];
+      el('wiz-q').textContent = Q.q;
+      el('wiz-q-sub').textContent = Q.sub;
+      el('wiz-step-label').textContent = 'Question ' + (step + 1) + ' of ' + QUESTIONS.length;
+      el('wiz-progress').style.width = (step / QUESTIONS.length * 100) + '%';
+      el('wiz-note').textContent = step === 0
+        ? "A Zestimate gives you a $50k+ swing. We'll get this to within a couple thousand."
+        : "Each answer tightens it. Now within ±" + fmtK(spread).replace('$','$').replace(',000','k') + " — keep going.";
+      const opts = el('wiz-options');
+      opts.innerHTML = '';
+      for (const k in picks) delete picks[k];
+      Q.options.forEach((o) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'wiz-opt'; b.textContent = o.label;
+        b.onclick = () => pick(b, o, Q);
+        opts.appendChild(b);
+      });
+      const next = el('wiz-next');
+      if (Q.multi) { next.style.display = 'block'; next.disabled = true; next.style.opacity = '.5'; }
+      else { next.style.display = 'none'; }
+    };
+
+    const advance = () => {
+      spread = QUESTIONS[step].newSpread;
+      step++;
+      if (step >= QUESTIONS.length) return finish();
+      setBar();
+      render();
+    };
+
+    const pick = (btn, o, Q) => {
+      if (!Q.multi) {
+        mid = clamp(mid + o.delta, 790000, 910000);
+        el('wiz-options').querySelectorAll('.wiz-opt').forEach(x => x.classList.remove('on'));
+        btn.classList.add('on');
+        setTimeout(advance, 180);
+        return;
+      }
+      // multi-select
+      if (o.clears) {
+        el('wiz-options').querySelectorAll('.wiz-opt').forEach(x => x.classList.remove('on'));
+        for (const k in picks) { mid -= picks[k]; delete picks[k]; }
+        btn.classList.add('on');
+      } else {
+        el('wiz-options').querySelectorAll('.wiz-opt').forEach((x) => {
+          // turn off any "None" option (it's the one with no delta and the last)
+          if (x.textContent.toLowerCase().indexOf('none') === 0) x.classList.remove('on');
+        });
+        if (btn.classList.contains('on')) { btn.classList.remove('on'); mid -= (picks[o.label] || 0); delete picks[o.label]; }
+        else { btn.classList.add('on'); mid += o.delta; picks[o.label] = o.delta; }
+        mid = clamp(mid, 790000, 910000);
+      }
+      const anyOn = el('wiz-options').querySelectorAll('.wiz-opt.on').length > 0;
+      el('wiz-next').disabled = !anyOn; el('wiz-next').style.opacity = anyOn ? '1' : '.5';
+      setBar();
+    };
+
+    const finish = () => {
+      el('wiz-body').style.display = 'none';
+      el('wiz-step-label').textContent = 'Done';
+      el('wiz-progress').style.width = '100%';
+      const finalMid = clamp(mid, 795000, 905000);
+      el('wiz-final-mid').textContent = fmtK(finalMid);
+      el('wiz-final-range').textContent = fmtK(finalMid - 4000) + ' – ' + fmtK(finalMid + 4000);
+      el('wiz-final').style.display = 'block';
+      el('wiz-final').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    el('wiz-next').addEventListener('click', advance);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = (form.querySelector('input').value || '').trim();
+      if (v) el('wiz-addr').textContent = v;
+      initial.style.display = 'none';
+      wizard.style.display = 'block';
+      step = 0; mid = BASE_MID; spread = BASE_SPREAD;
+      setBar(); render();
+      wizard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  })();
 </script>
 
 </body>
