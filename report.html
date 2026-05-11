@@ -214,6 +214,29 @@
   .modal-backdrop { background: rgba(4,4,6,0.72); backdrop-filter: blur(6px); }
   /* Slider */
   input[type=range] { accent-color: #34d399; }
+
+  /* ───────── Section order — the IA-recommended sequence ─────────
+     hero → trust → TL;DR → when-to-sell → comps → price-journeys →
+     why-you-beat-your-block → what-to-fix → who's-looking → what-could-change →
+     where-we-might-be-wrong → the-honest-stuff → check-an-agent's-number →
+     book-15-min → watch-my-home → ask-reed → questions-to-ask-any-agent */
+  main > section:nth-of-type(1)  { order: 1;  }   /* hero */
+  main > section:nth-of-type(2)  { order: 2;  }   /* trust band */
+  main > section:nth-of-type(3)  { order: 3;  }   /* TL;DR */
+  main > section:nth-of-type(4)  { order: 7;  }   /* alpha — why you beat your block */
+  main > section:nth-of-type(5)  { order: 5;  }   /* comp constellation */
+  main > section:nth-of-type(6)  { order: 9;  }   /* demand pulse — who's looking */
+  main > section:nth-of-type(7)  { order: 4;  }   /* sell window — moved UP to #4 */
+  main > section:nth-of-type(8)  { order: 13; }   /* counter-offer reconciler */
+  main > section:nth-of-type(9)  { order: 8;  }   /* value drivers — what to fix */
+  main > section:nth-of-type(10) { order: 11; }   /* where we might be wrong */
+  main > section:nth-of-type(11) { order: 12; }   /* counterintuitive insights */
+  main > section:nth-of-type(12) { order: 6;  }   /* price journey — moved UP, right after comps */
+  main > section:nth-of-type(13) { order: 10; }   /* risk radar — what could change your number */
+  main > section:nth-of-type(14) { order: 14; }   /* schedule 15-min */
+  main > section:nth-of-type(15) { order: 15; }   /* wealth account */
+  main > section:nth-of-type(16) { order: 16; }   /* ask reed */
+  main > section:nth-of-type(17) { order: 17; }   /* questions to ask any agent */
 </style>
 </head>
 <body class="grid-bg">
@@ -874,9 +897,7 @@
   </section>
 
   <!-- ───────────────────────────── SECTION: COUNTER-OFFER RECONCILER ───────────────────────────── -->
-  <section id="counter-offer" class="panel ring-soft overflow-hidden relative" style="padding: 40px;">
-    <div class="absolute pointer-events-none" style="top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(closest-side, rgba(139,149,245,0.06), transparent 70%);"></div>
-    <div class="relative grid grid-cols-12 gap-10 items-start">
+  <section id="counter-offer" class="panel ring-soft overflow-hidden relative" style="padding: 40px;">    <div class="relative grid grid-cols-12 gap-10 items-start">
       <div class="col-span-7">
         <div class="text-[12px] uppercase muted mb-3" style="letter-spacing: 0.14em;">Already talked to an agent?</div>
         <h3 class="serif text-[34px] font-semibold tracking-tight mb-4" style="line-height: 1.1; letter-spacing: -0.025em;">Two agents gave you two different numbers? Run them past Reed.</h3>
@@ -903,15 +924,16 @@
   <section class="grid grid-cols-12 gap-6">
     <div class="col-span-12 flex items-end justify-between">
       <div>
-        <div class="text-[12px] muted uppercase tracking-wider mb-2">What makes your house worth more</div>
-        <h2 class="serif text-[36px] font-semibold tracking-tight">Why your home is worth $130k more than the average house in Inman Park.</h2>
+        <div class="text-[12px] muted uppercase tracking-wider mb-2">What to fix before you list — and what to skip</div>
+        <h2 class="serif text-[36px] font-semibold tracking-tight">Refinish the floors. Stage two rooms. Don't touch the bathroom.</h2>
       </div>
-      <div class="chip chip-neutral">And the two things working against you</div>
+      <div class="chip chip-neutral">Plus: what makes your home worth $130k more than the median</div>
     </div>
 
     <div class="col-span-12 panel p-6 ring-soft">
       <div class="grid grid-cols-12 gap-8">
-        <div class="col-span-7 space-y-4">
+        <div class="col-span-5 space-y-4" style="order: 2;">
+          <div class="text-[12px] muted uppercase tracking-wider mb-1">And here's why it's worth what it's worth</div>
           <!-- Driver row -->
           <div>
             <div class="flex items-baseline justify-between mb-1.5">
@@ -964,9 +986,9 @@
           </div>
         </div>
 
-        <div class="col-span-5">
+        <div class="col-span-7" style="order: 1;">
           <div class="panel-2 p-5">
-            <div class="text-[12px] muted uppercase tracking-wider mb-3">What to actually do before you list</div>
+            <div class="text-[12px] muted uppercase tracking-wider mb-3">Do these before you list</div>
             <div class="space-y-4">
               <div class="flex items-start gap-3">
                 <div class="w-7 h-7 rounded-md flex items-center justify-center shrink-0" style="background: var(--emerald-soft); color: var(--emerald);">
@@ -1058,9 +1080,7 @@
     </div>
 
     <!-- Card 1 (was Card 6) — Linda's screenshot moment, lead with it -->
-    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
-      <div class="relative">
+    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">      <div class="relative">
         <div class="chip chip-emerald mb-4">Where your wealth came from</div>
         <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Owning this house made you 4× more money than paying it off did.</div>
         <p class="text-[13px] muted leading-relaxed mb-5">Since you bought in 2019, you paid down <span class="text-white">$57,400</span> in principal. The market added <span class="text-white">$235,200</span> on top. Your house did 80% of the work. You did 20%.</p>
@@ -1072,9 +1092,7 @@
     </div>
 
     <!-- Card 2 (was Card 1) -->
-    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
-      <div class="relative">
+    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">      <div class="relative">
         <div class="chip chip-emerald mb-4">The pricing trick</div>
         <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">List a little <em>under</em> what your home's worth. Sell for <em>more</em>.</div>
         <p class="text-[13px] muted leading-relaxed mb-5">In your zip, homes priced just under their value sold for <span class="text-white">4% over asking, in 9 days</span>. The ones that priced slightly above sat for <span class="text-white">47 days</span> and sold for 6% under. The under-pricers won. Every time.</p>
@@ -1086,9 +1104,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(52,211,153,0.12), transparent); transform: translate(40%, -40%);"></div>
-      <div class="relative">
+    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">      <div class="relative">
         <div class="chip chip-emerald mb-4">What you're earning</div>
         <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">You make $67 a day. Just for living here.</div>
         <p class="text-[13px] muted leading-relaxed mb-5"><span class="text-white">$2,010 a month.</span> That's what this house pays you to live in it. The math: it goes up <span class="text-white">$129 a day</span>, your mortgage interest costs <span class="text-white">$62 a day</span>. You pocket the difference.</p>
@@ -1113,9 +1129,7 @@
     </div>
 
     <!-- Card 5 -->
-    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 rounded-full" style="background: radial-gradient(closest-side, rgba(251,113,133,0.12), transparent); transform: translate(40%, -40%);"></div>
-      <div class="relative">
+    <div class="col-span-4 panel p-6 ring-soft relative overflow-hidden">      <div class="relative">
         <div class="chip chip-rose mb-4">The 21-day cliff</div>
         <div class="serif text-[26px] font-semibold leading-[1.15] mb-3">Day 22 is when buyers start asking what's wrong with your house.</div>
         <p class="text-[13px] muted leading-relaxed mb-5">Across 4,200 nearby sales, showings collapse <span class="text-white">73%</span> after week three. Not because the house changed — because the listing aged. Buyers treat day-22 homes the way you treat the milk you forgot about. Pricing right beats pricing high. Every time.</p>
@@ -1306,9 +1320,7 @@
   </section>
 
   <!-- ───────────────────────────── SECTION: SCHEDULE 15-MIN ANCHOR ───────────────────────────── -->
-  <section class="relative overflow-hidden" style="background: linear-gradient(180deg, rgba(52,211,153,0.05), rgba(52,211,153,0.01)); border: 1px solid var(--emerald-line); border-radius: 14px; padding: 36px 40px;">
-    <div class="absolute pointer-events-none" style="top: -120px; right: -120px; width: 380px; height: 380px; background: radial-gradient(closest-side, rgba(52,211,153,0.10), transparent 70%);"></div>
-    <div class="relative grid grid-cols-12 gap-8 items-center">
+  <section class="relative overflow-hidden" style="background: linear-gradient(180deg, rgba(52,211,153,0.05), rgba(52,211,153,0.01)); border: 1px solid var(--emerald-line); border-radius: 14px; padding: 36px 40px;">    <div class="relative grid grid-cols-12 gap-8 items-center">
       <div class="col-span-7">
         <div class="flex items-center gap-2 mb-3">
           <span class="dot pulse" style="background: var(--emerald);"></span>
